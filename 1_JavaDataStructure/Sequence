@@ -1,0 +1,24 @@
+1. basic
+2. recursion
+3. array
+4. string
+5. sorting
+6. searching
+7. linked list
+8. stack
+9. queue
+10. tree
+    a. Binary Search Tree
+    b. AVL tree
+11. Hashing
+    a. Direct Chaining
+    b. Open Addressing
+        a. Linear probing
+        b. Quadratic probing
+        c. Double Hashing
+12. Graphs
+    a. adjancency list
+    b. adjancency matrix
+    c. dijsktra
+    d. bellman ford
+15. dynamic
