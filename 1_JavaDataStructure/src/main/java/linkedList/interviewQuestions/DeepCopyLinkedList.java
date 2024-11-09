@@ -1,4 +1,4 @@
-package org.singlyLinkedList;
+package linkedList.interviewQuestions;
 
 public class DeepCopyLinkedList {
 
