@@ -103,7 +103,7 @@ public class BinaryTree {
     if (node == null) {
       return 0;
     }
-    return Math.min(heightOfTree(node.left), heightOfTree(node.right)) + 1;
+    return Math.max(heightOfTree(node.left), heightOfTree(node.right)) + 1;
   }
 
   public int sumOfAllNodes(TreeNode node) {
