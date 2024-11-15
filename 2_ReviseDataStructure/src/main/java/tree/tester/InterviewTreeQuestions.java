@@ -1,5 +1,7 @@
 package tree.tester;
 
+import java.util.ArrayList;
+import java.util.List;
 import tree.*;
 
 public class InterviewTreeQuestions {
@@ -68,24 +70,52 @@ public class InterviewTreeQuestions {
 
   }
 
-  private static void maxPathSum(){
+  private static void maxPathSum() {
+    BinaryTree tree = new BinaryTree();
+    createTree(tree);
 
+    MaxPathSum maxPathSum = new MaxPathSum();
+    System.out.println("Max Path Sum = " + maxPathSum.maxPathSum(tree.getRootNode()));
   }
 
-  private static void minimumAbsoluteDifference(){
+  private static void minimumAbsoluteDifference() {
 
+    BinaryTree tree = new BinaryTree();
+    createTree(tree);
+    MinimumAbsoluteDifference minimumAbsoluteDifference = new MinimumAbsoluteDifference();
+    var minimum = minimumAbsoluteDifference.minimumAbsoluteDifference(tree.getRootNode());
+    System.out.println("Minimum Absolute Difference = " + minimum);
   }
 
-  private static void validBst(){
+  private static void validBst() {
+    BinaryTree tree = new BinaryTree();
+    createTree(tree);
 
+    ValidBST validBST = new ValidBST();
+    var result = validBST.isValidBst(tree.getRootNode());
+
+    System.out.println("Is valid bst = " + result);
   }
 
-  private static void avgOfEachLevelOfLevelOrder(){
+  private static void avgOfEachLevelOfLevelOrder() {
 
+    BinaryTree tree = new BinaryTree();
+    createTree(tree);
+    AverageOfEachLevelOfLevelOrderTraversal average = new AverageOfEachLevelOfLevelOrderTraversal();
+    var averageLevel = average.averageOfLevelOrder(tree.getRootNode());
+    System.out.println("Average of Each level = ");
+    averageLevel.forEach(element -> System.out.println("Average = " + element + " "));
   }
 
-  private static void rightSideViewOfTree(){
+  private static void rightSideViewOfTree() {
 
+    BinaryTree tree = new BinaryTree();
+    createTree(tree);
+    RightSideViewOfTree rightSideViewOfTree = new RightSideViewOfTree();
+    List<Integer> rightSideView = new ArrayList<>();
+    rightSideViewOfTree.rightSideView(tree.getRootNode(), rightSideView, 0);
+    System.out.println("Right Side View = ");
+    rightSideView.forEach(element -> System.out.println(element + " "));
   }
 
   private static void lowestCommonAncestor(){
@@ -202,5 +232,18 @@ public class InterviewTreeQuestions {
     invertBinaryTree.invertTree(tree.getRootNode());
     System.out.println("Inverted Tree level Order");
     tree.levelOrder(tree.getRootNode());
+  }
+
+  public static void createTree(BinaryTree tree) {
+    tree.insert(8);
+    tree.insert(5);
+    tree.insert(7);
+    tree.insert(2);
+    tree.insert(3);
+    tree.insert(6);
+    tree.insert(11);
+    tree.insert(12);
+    tree.insert(9);
+    tree.insert(10);
   }
 }
