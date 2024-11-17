@@ -327,12 +327,8 @@ public class InterviewQuestionTester {
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
         singlyLinkedList.create(1);
         singlyLinkedList.insertAtLast(2);
-        singlyLinkedList.insertAtLast(2);
-        singlyLinkedList.insertAtLast(2);
         singlyLinkedList.insertAtLast(3);
         singlyLinkedList.insertAtLast(4);
-        singlyLinkedList.insertAtLast(4);
-        singlyLinkedList.insertAtLast(8);
         singlyLinkedList.insertAtLast(8);
 
         singlyLinkedList.traversal();

@@ -8,15 +8,18 @@ public class SumOfNodeTillLeafNode {
     public int sumOfNodeTillLeadNode(TreeNode node, int number){
 
         if (node == null){
-            return number;
-        }
-        if (node.left == null && node.right== null){
-            return number;
+            return 0;
         }
 
-        number = (number*10) + node.val;
-        int leftSum = sumOfNodeTillLeadNode(node.left,number);
-        int rightSum = sumOfNodeTillLeadNode(node.right,number);
+
+        var newNumber = (number*10) + node.val;
+
+        if (node.left == null && node.right== null){
+            return newNumber;
+        }
+
+        int leftSum = sumOfNodeTillLeadNode(node.left,newNumber);
+        int rightSum = sumOfNodeTillLeadNode(node.right,newNumber);
 
         return leftSum+rightSum;
     }
