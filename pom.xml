@@ -12,6 +12,16 @@
     <modules>
         <module>1_JavaDataStructure</module>
         <module>2_ReviseDataStructure</module>
-
+		<module>datastructure-sdk</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>5.11.4</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
