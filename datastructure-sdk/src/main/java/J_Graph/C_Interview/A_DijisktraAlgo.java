@@ -12,11 +12,11 @@ public class A_DijisktraAlgo {
     graph = new LinkedList<>();
   }
 
-  public void addNode(int val) {}
+  public void addNode(String val, int index) {}
 
-  public void addDirectedEdge(int source, int target) {}
+  public void addDirectedEdge(int source, int target, int weight) {}
 
-  public void dijistraAlgo() {}
+  public void dijistraAlgo(String source, String target) {}
 
   public void printPath() {}
 }

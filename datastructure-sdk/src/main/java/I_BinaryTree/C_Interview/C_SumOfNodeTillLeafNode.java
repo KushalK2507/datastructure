@@ -4,8 +4,8 @@ import I_BinaryTree.node.TreeNode;
 
 public class C_SumOfNodeTillLeafNode {
 
-    public int sumOfNodeTillLeadNode(TreeNode node){
+  public int sumOfNodeTillLeadNode(TreeNode node, int level) {
 
-        return -2;
-    }
+    return -2;
+  }
 }

@@ -1,8 +1,8 @@
 package J_Graph;
 
-import graph.DijsktraAlgo.DijsktraAlgo;
-import graph.adjacencyList.AdjacencyListGraph;
-import graph.adjacencyMatrix.AdjacencyMatrixGraph;
+import J_Graph.A_AdjacencyList.A_GraphUsingAdjacencyList;
+import J_Graph.B_AdjacencyMatrix.A_GraphUsingAdjacencyMatrix;
+import J_Graph.C_Interview.A_DijisktraAlgo;
 
 public class GraphTester {
 
@@ -31,7 +31,7 @@ public class GraphTester {
 
   private static void dijsktraAlgo() {
 
-    DijsktraAlgo dijsktraAlgo = new DijsktraAlgo();
+    A_DijisktraAlgo dijsktraAlgo = new A_DijisktraAlgo();
     dijsktraAlgo.addNode("A", 0);
     dijsktraAlgo.addNode("B", 1);
     dijsktraAlgo.addNode("C", 2);
@@ -40,24 +40,24 @@ public class GraphTester {
     dijsktraAlgo.addNode("F", 5);
     dijsktraAlgo.addNode("G", 6);
 
-    dijsktraAlgo.addDirectedEdges(0, 1, 2);
-    dijsktraAlgo.addDirectedEdges(0, 2, 5);
-    dijsktraAlgo.addDirectedEdges(1, 2, 6);
-    dijsktraAlgo.addDirectedEdges(1, 3, 1);
-    dijsktraAlgo.addDirectedEdges(1, 4, 3);
-    dijsktraAlgo.addDirectedEdges(2, 5, 8);
-    dijsktraAlgo.addDirectedEdges(3, 4, 4);
-    dijsktraAlgo.addDirectedEdges(4, 6, 9);
-    dijsktraAlgo.addDirectedEdges(5, 6, 7);
+    dijsktraAlgo.addDirectedEdge(0, 1, 2);
+    dijsktraAlgo.addDirectedEdge(0, 2, 5);
+    dijsktraAlgo.addDirectedEdge(1, 2, 6);
+    dijsktraAlgo.addDirectedEdge(1, 3, 1);
+    dijsktraAlgo.addDirectedEdge(1, 4, 3);
+    dijsktraAlgo.addDirectedEdge(2, 5, 8);
+    dijsktraAlgo.addDirectedEdge(3, 4, 4);
+    dijsktraAlgo.addDirectedEdge(4, 6, 9);
+    dijsktraAlgo.addDirectedEdge(5, 6, 7);
 
-    dijsktraAlgo.dijsktraAlgo("A", "G");
+    dijsktraAlgo.dijistraAlgo("A", "G");
     System.out.println();
     System.out.println("------------------");
   }
 
   private static void adjacencyMatrixDirectedGraph() {
 
-    AdjacencyMatrixGraph directedMatrixGraph = new AdjacencyMatrixGraph(8);
+    A_GraphUsingAdjacencyMatrix directedMatrixGraph = new A_GraphUsingAdjacencyMatrix(8);
     directedMatrixGraph.addNode("A", 0);
     directedMatrixGraph.addNode("B", 1);
     directedMatrixGraph.addNode("C", 2);
@@ -84,7 +84,7 @@ public class GraphTester {
 
   private static void adjacencyMatrixUndirectedGraph() {
 
-    AdjacencyMatrixGraph undirectedGraph = new AdjacencyMatrixGraph(5);
+    A_GraphUsingAdjacencyMatrix undirectedGraph = new A_GraphUsingAdjacencyMatrix(5);
     undirectedGraph.addNode("A", 0);
     undirectedGraph.addNode("B", 1);
     undirectedGraph.addNode("C", 2);
@@ -111,7 +111,7 @@ public class GraphTester {
 
   private static void adjacencyListDirectedGraph() {
 
-    AdjacencyListGraph directedGraph = new AdjacencyListGraph();
+    A_GraphUsingAdjacencyList directedGraph = new A_GraphUsingAdjacencyList();
     directedGraph.addNode("A", 0);
     directedGraph.addNode("B", 1);
     directedGraph.addNode("C", 2);
@@ -121,14 +121,14 @@ public class GraphTester {
     directedGraph.addNode("G", 6);
     directedGraph.addNode("H", 7);
 
-    directedGraph.addDirectedEdges(0, 2);
-    directedGraph.addDirectedEdges(1, 2);
-    directedGraph.addDirectedEdges(1, 3);
-    directedGraph.addDirectedEdges(2, 4);
-    directedGraph.addDirectedEdges(3, 5);
-    directedGraph.addDirectedEdges(4, 5);
-    directedGraph.addDirectedEdges(4, 7);
-    directedGraph.addDirectedEdges(5, 6);
+    directedGraph.addDirectedEdge(0, 2);
+    directedGraph.addDirectedEdge(1, 2);
+    directedGraph.addDirectedEdge(1, 3);
+    directedGraph.addDirectedEdge(2, 4);
+    directedGraph.addDirectedEdge(3, 5);
+    directedGraph.addDirectedEdge(4, 5);
+    directedGraph.addDirectedEdge(4, 7);
+    directedGraph.addDirectedEdge(5, 6);
 
     System.out.print("Topological Sort using Adjacency List of Directed Graph: ");
     directedGraph.topologicalSort();
@@ -138,18 +138,18 @@ public class GraphTester {
 
   private static void adjacencyListUndirectedGraph() {
 
-    AdjacencyListGraph undirectedGraph = new AdjacencyListGraph();
+    A_GraphUsingAdjacencyList undirectedGraph = new A_GraphUsingAdjacencyList();
     undirectedGraph.addNode("A", 0);
     undirectedGraph.addNode("B", 1);
     undirectedGraph.addNode("C", 2);
     undirectedGraph.addNode("D", 3);
     undirectedGraph.addNode("E", 4);
 
-    undirectedGraph.addUndirectedEge(0, 1);
-    undirectedGraph.addUndirectedEge(0, 2);
-    undirectedGraph.addUndirectedEge(0, 3);
-    undirectedGraph.addUndirectedEge(1, 4);
-    undirectedGraph.addUndirectedEge(3, 4);
+    undirectedGraph.addUndirectedEdge(0, 1);
+    undirectedGraph.addUndirectedEdge(0, 2);
+    undirectedGraph.addUndirectedEdge(0, 3);
+    undirectedGraph.addUndirectedEdge(1, 4);
+    undirectedGraph.addUndirectedEdge(3, 4);
 
     System.out.print("BFS using Adjacency List of Undirected Graph: ");
     undirectedGraph.bfs();

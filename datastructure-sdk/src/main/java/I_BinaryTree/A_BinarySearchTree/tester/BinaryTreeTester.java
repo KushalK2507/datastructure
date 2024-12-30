@@ -1,14 +1,14 @@
 package I_BinaryTree.A_BinarySearchTree.tester;
 
+import I_BinaryTree.A_BinarySearchTree.A_BinaryTree;
 import java.util.ArrayList;
 import java.util.List;
-import tree.BinaryTree;
 
 public class BinaryTreeTester {
 
   public static void main(String[] args) {
 
-    BinaryTree tree = new BinaryTree();
+    A_BinaryTree tree = new A_BinaryTree();
     createTree(tree);
 
     System.out.println("Pre order = ");
@@ -55,38 +55,38 @@ public class BinaryTreeTester {
     System.out.println("-------------------------------");
 
     System.out.println("Search Element Using Level Order");
-    System.out.print(tree.searchUsingLevelOrder(tree.getRootNode(), 8));
+    System.out.print(tree.searchElementUsingLevelOrder(tree.getRootNode(), 8));
     System.out.println();
     System.out.println("-------------------------------");
 
     System.out.println("Parent Node of Given Node");
-    System.out.print(tree.parentNode(tree.getRootNode(), 6).val);
+    System.out.print(tree.parentNode(tree.getRootNode(), 6).value);
     System.out.println();
     System.out.println("-------------------------------");
 
     System.out.println("Sibling Node ");
-    var siblingNode = tree.siblingNode(tree.getRootNode(), 3);
+    var siblingNode = tree.siblingOfNode(tree.getRootNode(), 3);
     if (siblingNode == null) {
       System.out.println(" No sibling Found");
     } else {
-      System.out.print(siblingNode.val);
+      System.out.print(siblingNode.value);
     }
-    siblingNode = tree.siblingNode(tree.getRootNode(), 2);
+    siblingNode = tree.siblingOfNode(tree.getRootNode(), 2);
     if (siblingNode == null) {
       System.out.println("No sibling Found");
     } else {
-      System.out.print(siblingNode.val);
+      System.out.print(siblingNode.value);
     }
     System.out.println();
     System.out.println("-------------------------------");
 
     System.out.println("Kth Smallest Element ");
-    System.out.print(tree.KthSmallestElement(4));
+    System.out.print(tree.kthSmallestElement(tree.getRootNode(), 4));
     System.out.println();
     System.out.println("-------------------------------");
 
     System.out.println("Kth Largest Element ");
-    System.out.print(tree.KthLargestElement(4));
+    System.out.print(tree.kthSmallestElement(tree.getRootNode(), 4));
     System.out.println();
     System.out.println("-------------------------------");
 
@@ -115,7 +115,7 @@ public class BinaryTreeTester {
     System.out.println("-------------------------------");
   }
 
-  public static void createTree(BinaryTree tree) {
+  public static void createTree(A_BinaryTree tree) {
     tree.insert(8);
     tree.insert(5);
     tree.insert(7);

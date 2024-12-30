@@ -1,5 +1,7 @@
 package I_BinaryTree.C_Interview.tester;
 
+import I_BinaryTree.A_BinarySearchTree.A_BinaryTree;
+import I_BinaryTree.C_Interview.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,56 +71,53 @@ public class InterviewTreeQuestions {
   }
 
   private static void maxPathSum() {
-    BinaryTree tree = new BinaryTree();
+    A_BinaryTree tree = new A_BinaryTree();
     createTree(tree);
 
-    MaxPathSum maxPathSum = new MaxPathSum();
+    L_MaxPathSum maxPathSum = new L_MaxPathSum();
     System.out.println("Max Path Sum = " + maxPathSum.maxPathSum(tree.getRootNode()));
   }
 
   private static void minimumAbsoluteDifference() {
 
-    BinaryTree tree = new BinaryTree();
+    A_BinaryTree tree = new A_BinaryTree();
     createTree(tree);
-    MinimumAbsoluteDifference minimumAbsoluteDifference = new MinimumAbsoluteDifference();
-    var minimum = minimumAbsoluteDifference.minimumAbsoluteDifference(tree.getRootNode());
+    K_MinAbsoluteDifference minimumAbsoluteDifference = new K_MinAbsoluteDifference();
+    var minimum = minimumAbsoluteDifference.minAbsoluteDifference(tree.getRootNode());
     System.out.println("Minimum Absolute Difference = " + minimum);
   }
 
   private static void validBst() {
-    BinaryTree tree = new BinaryTree();
+    A_BinaryTree tree = new A_BinaryTree();
     createTree(tree);
 
-    ValidBST validBST = new ValidBST();
-    var result = validBST.isValidBst(tree.getRootNode());
+    J_ValidBst validBST = new J_ValidBst();
+    var result = validBST.isValidBast(tree.getRootNode());
 
     System.out.println("Is valid bst = " + result);
   }
 
   private static void avgOfEachLevelOfLevelOrder() {
-
-    BinaryTree tree = new BinaryTree();
+    A_BinaryTree tree = new A_BinaryTree();
     createTree(tree);
-    AverageOfEachLevelOfLevelOrderTraversal average = new AverageOfEachLevelOfLevelOrderTraversal();
+    I_AverageOfLevelOrder average = new I_AverageOfLevelOrder();
     var averageLevel = average.averageOfLevelOrder(tree.getRootNode());
     System.out.println("Average of Each level = ");
     averageLevel.forEach(element -> System.out.println("Average = " + element + " "));
   }
 
   private static void rightSideViewOfTree() {
-
-    BinaryTree tree = new BinaryTree();
+    A_BinaryTree tree = new A_BinaryTree();
     createTree(tree);
-    RightSideViewOfTree rightSideViewOfTree = new RightSideViewOfTree();
+    H_RightSideViewOFTree rightSideViewOfTree = new H_RightSideViewOFTree();
     List<Integer> rightSideView = new ArrayList<>();
-    rightSideViewOfTree.rightSideView(tree.getRootNode(), rightSideView, 0);
+    rightSideViewOfTree.rightSideViewOfTree(tree.getRootNode(), rightSideView, 0);
     System.out.println("Right Side View = ");
     rightSideView.forEach(element -> System.out.println(element + " "));
   }
 
   private static void lowestCommonAncestor() {
-
-    BinaryTree tree = new BinaryTree();
+    A_BinaryTree tree = new A_BinaryTree();
     tree.insert(4);
     tree.insert(2);
     tree.insert(7);
@@ -127,17 +126,17 @@ public class InterviewTreeQuestions {
     tree.insert(6);
     tree.insert(9);
 
-    LowestCommonAncestor lowestCommonAncestor = new LowestCommonAncestor();
+    G_LowestCommonAncestor lowestCommonAncestor = new G_LowestCommonAncestor();
     var lcaNode = lowestCommonAncestor.lowestCommonAncestor(tree.getRootNode(), 3, 6);
     if (lcaNode != null) {
-      System.out.println("LCA = " + lcaNode.val);
+      System.out.println("LCA = " + lcaNode.value);
     } else {
       System.out.println("LCA Does not Exist for given value");
     }
   }
 
   private static void flattenTree() {
-    BinaryTree tree = new BinaryTree();
+    A_BinaryTree tree = new A_BinaryTree();
     tree.insert(4);
     tree.insert(2);
     tree.insert(7);
@@ -146,10 +145,10 @@ public class InterviewTreeQuestions {
     tree.insert(6);
     tree.insert(9);
 
-    BinaryTree tree1 = new BinaryTree();
+    A_BinaryTree tree1 = new A_BinaryTree();
     System.out.println("Level order");
     tree1.levelOrder(tree.getRootNode());
-    FlattenTree flattenTree = new FlattenTree();
+    F_FlattenTree_MorrisTraversal flattenTree = new F_FlattenTree_MorrisTraversal();
     flattenTree.flattenTree(tree.getRootNode());
     System.out.println("Flatten Tree");
 
@@ -160,10 +159,10 @@ public class InterviewTreeQuestions {
     int[] inOrder = {2, 3, 5, 6, 7, 8, 9, 10, 11, 12};
     int[] postOrder = {3, 2, 6, 7, 5, 10, 9, 12, 11, 8};
 
-    TreeFromInAndPostOrder tree = new TreeFromInAndPostOrder();
-    var root = tree.binaryTree(inOrder, postOrder);
+    E_TreeFromInAndPostOrder tree = new E_TreeFromInAndPostOrder();
+    var root = tree.treeFromInSnfPostOrder(inOrder, postOrder);
 
-    BinaryTree tree1 = new BinaryTree();
+    A_BinaryTree tree1 = new A_BinaryTree();
     tree1.levelOrder(root);
   }
 
@@ -171,15 +170,15 @@ public class InterviewTreeQuestions {
     int[] preOrder = {8, 5, 2, 3, 7, 6, 11, 9, 10, 12};
     int[] inOrder = {2, 3, 5, 6, 7, 8, 9, 10, 11, 12};
 
-    TreeFromPreAndInOrder tree = new TreeFromPreAndInOrder();
-    var root = tree.binaryTree(preOrder, inOrder);
+    D_TreeFromPreAndInOrder tree = new D_TreeFromPreAndInOrder();
+    var root = tree.treeFromPreAndInOrder(preOrder, inOrder);
 
-    BinaryTree tree1 = new BinaryTree();
+    A_BinaryTree tree1 = new A_BinaryTree();
     tree1.levelOrder(root);
   }
 
   private static void sumOfNodeTillLeafNode() {
-    BinaryTree tree = new BinaryTree();
+    A_BinaryTree tree = new A_BinaryTree();
     tree.insert(4);
     tree.insert(2);
     tree.insert(7);
@@ -188,7 +187,7 @@ public class InterviewTreeQuestions {
     tree.insert(6);
     tree.insert(9);
 
-    SumOfNodeTillLeafNode sumOfNodeTillLeafNode = new SumOfNodeTillLeafNode();
+    C_SumOfNodeTillLeafNode sumOfNodeTillLeafNode = new C_SumOfNodeTillLeafNode();
     System.out.println("Level Order Traversal");
     tree.levelOrder(tree.getRootNode());
     System.out.println(
@@ -196,7 +195,7 @@ public class InterviewTreeQuestions {
   }
 
   private static void populateTheNextPointer() {
-    PopulateNextPointer populateNextPointer = new PopulateNextPointer();
+    B_PopulateNextPointer populateNextPointer = new B_PopulateNextPointer();
     var root = populateNextPointer.insert(null, 1);
     populateNextPointer.insert(root, 2);
     populateNextPointer.insert(root, 3);
@@ -212,7 +211,7 @@ public class InterviewTreeQuestions {
   }
 
   private static void invertBinaryTree() {
-    BinaryTree tree = new BinaryTree();
+    A_BinaryTree tree = new A_BinaryTree();
     tree.insert(4);
     tree.insert(2);
     tree.insert(7);
@@ -223,13 +222,13 @@ public class InterviewTreeQuestions {
 
     System.out.println("Original Tree level Order");
     tree.levelOrder(tree.getRootNode());
-    InvertBinaryTree invertBinaryTree = new InvertBinaryTree();
-    invertBinaryTree.invertTree(tree.getRootNode());
+    A_InvertBinaryTree invertBinaryTree = new A_InvertBinaryTree();
+    invertBinaryTree.invertBinaryTree(tree.getRootNode());
     System.out.println("Inverted Tree level Order");
     tree.levelOrder(tree.getRootNode());
   }
 
-  public static void createTree(BinaryTree tree) {
+  public static void createTree(A_BinaryTree tree) {
     tree.insert(8);
     tree.insert(5);
     tree.insert(7);

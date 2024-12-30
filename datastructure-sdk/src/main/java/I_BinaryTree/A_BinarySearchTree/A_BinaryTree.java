@@ -1,95 +1,91 @@
 package I_BinaryTree.A_BinarySearchTree;
 
 import I_BinaryTree.node.TreeNode;
-import com.sun.source.tree.Tree;
+import java.util.List;
 
 public class A_BinaryTree {
 
-    TreeNode root;
+  TreeNode root;
 
-    public TreeNode createTree(int val){
-        root = new TreeNode(val);
-        return root;
+  public TreeNode getRootNode() {
+    return root;
+  }
+
+  public TreeNode createTree(int val) {
+    root = new TreeNode(val);
+    return root;
+  }
+
+  public void insert(int val) {
+    if (root == null) {
+      createTree(val);
     }
+    addNode(val);
+  }
 
-    public void addNode(int val){
+  private void addNode(int val) {}
 
-    }
+  public void preOrder(TreeNode node) {}
 
-    public void preOrder(TreeNode node){
+  public void postOrder(TreeNode node) {}
 
-    }
+  public void inOrder(TreeNode node) {}
 
-    public void postOrder(TreeNode node){
+  public void levelOrder(TreeNode node) {}
 
-    }
+  public void levelOrderUsingQueue(TreeNode node) {}
 
-    public void inOrder(TreeNode node){
+  public int heightOfTree(TreeNode node) {
 
-    }
+    return -2;
+  }
 
-    public void levelOrder(TreeNode node){
+  public int sumOfAllNodes(TreeNode node) {
 
-    }
+    return -2;
+  }
 
-    public void levelOrderUsingQueue(TreeNode node){
+  public void leafNodes(TreeNode node, List<Integer> leafNodes) {}
 
-    }
+  public boolean searchElement(TreeNode node, int elementToBeSearched) {
 
-    public void heightOfTree(TreeNode node){
+    return false;
+  }
 
-    }
+  public boolean searchElementUsingLevelOrder(TreeNode node, int elementToBeSearched) {
 
-    public void sumOfAllNodes(TreeNode node){
+    return false;
+  }
 
-    }
+  public TreeNode parentNode(TreeNode node, int nodeVal) {
+    return null;
+  }
 
-    public void leafNodes(TreeNode node){
+  public TreeNode siblingOfNode(TreeNode node, int element) {
 
-    }
+    return null;
+  }
 
-    public void searchElement(TreeNode node){
+  public int kthSmallestElement(TreeNode node, int k) {
 
-    }
+    return -1;
+  }
 
-    public void searchElementUsingLevelOrder(TreeNode node){
+  public int KthLargestElement(TreeNode node, int k) {
 
-    }
+    return -1;
+  }
 
-    public void parentNode(TreeNode node){
+  public void sortedTree(TreeNode node, List<Integer> sortedTree) {}
 
-    }
+  public boolean deleteNode(TreeNode node, int elementToBeDeleted) {
 
-    public int siblingOfNode(TreeNode node){
+    return false;
+  }
 
-        return -1;
-    }
+  public int maxWidthOfTree(TreeNode node) {
+    return -1;
+  }
 
-    public int kthSmallestElement(TreeNode node, int k){
-
-        return -1;
-    }
-
-    public int KthLargestElement(TreeNode node, int k){
-
-        return -1;
-    }
-
-    public void sortedTree(TreeNode node){
-
-    }
-
-    public void deleteNode(TreeNode node){
-
-    }
-
-    public int maxWidthOfTree(TreeNode node){
-        return -1;
-    }
-
-
-
-    public void sumOfLeafNodes(TreeNode node){
-
-    }
+  public void sumOfLeafNodes(TreeNode node) {}
 }
