@@ -1,3 +1,8 @@
 package K_Dynanic;
 
-public class G_CombinationSums {}
+import java.util.List;
+
+public class G_CombinationSums {
+
+  public void combinationSums(int[] arr, int target, List<List<Integer>> result) {}
+}

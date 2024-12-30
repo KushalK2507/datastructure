@@ -1,3 +1,8 @@
 package K_Dynanic;
 
-public class E_Combinations {}
+import java.util.List;
+
+public class E_Combinations {
+
+  public void combinations(int n, int k, List<List<Integer>> result) {}
+}

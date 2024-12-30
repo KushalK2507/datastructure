@@ -1,3 +1,8 @@
 package K_Dynanic;
 
-public class D_LetterCombination {}
+import java.util.List;
+
+public class D_LetterCombination {
+
+  public void letterCombination(String digit, List<String> result) {}
+}

@@ -1,3 +1,8 @@
 package K_Dynanic;
 
-public class H_GenerateParenthesis {}
+import java.util.List;
+
+public class H_GenerateParenthesis {
+
+  public void generateParenthesis(int n, List<Integer> result) {}
+}

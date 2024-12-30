@@ -5,15 +5,14 @@ import java.util.List;
 
 public class F_AnagramTest {
 
-    public boolean isAnagram(String s1, String s2){
+  public boolean isAnagram(String s1, String s2) {
 
-        return false;
-    }
+    return false;
+  }
 
-    public List<List<String>> groupAnagram(String[] groups){
-        List<List<String>> result = new LinkedList<>();
+  public List<List<String>> groupAnagram(List<String> groups) {
+    List<List<String>> result = new LinkedList<>();
 
-
-        return result;
-    }
+    return result;
+  }
 }
