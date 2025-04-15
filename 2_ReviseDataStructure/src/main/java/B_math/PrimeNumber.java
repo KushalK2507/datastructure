@@ -1,4 +1,4 @@
-package math;
+package B_math;
 
 public class PrimeNumber {
 

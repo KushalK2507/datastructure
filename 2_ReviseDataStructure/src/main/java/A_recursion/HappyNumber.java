@@ -1,4 +1,4 @@
-package recursion;
+package A_recursion;
 
 public class HappyNumber {
 

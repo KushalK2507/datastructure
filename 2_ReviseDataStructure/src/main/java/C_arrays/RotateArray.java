@@ -1,4 +1,4 @@
-package arrays;
+package C_arrays;
 
 public class RotateArray {
 
