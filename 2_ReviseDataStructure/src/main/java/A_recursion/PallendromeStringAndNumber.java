@@ -37,7 +37,7 @@ public class PallendromeStringAndNumber {
         int orignaln= n;
         int reverseNumber=0;
         while (n>0){
-            reverseNumber =(reverseNumber*10)+((n%10));
+            reverseNumber =(reverseNumber*10)+(n%10);
             n= n/10;
         }
 
