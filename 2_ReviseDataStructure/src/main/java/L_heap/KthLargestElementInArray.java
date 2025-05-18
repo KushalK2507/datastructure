@@ -23,12 +23,12 @@ public class KthLargestElementInArray {
 
         for (int num : arr){
             queue.offer(num);
-            if (queue.size() == k){
+            if (queue.size() > k){
                 return queue.poll();
             }
         }
 
-        return queue.poll();
+        return queue.peek();
     }
 
 
