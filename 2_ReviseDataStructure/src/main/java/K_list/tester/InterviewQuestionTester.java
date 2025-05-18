@@ -32,7 +32,7 @@ public class InterviewQuestionTester {
         exchangeNodeInList();
         System.out.println("-------------------------------");
 
-        // ToDo: Start from here
+
         System.out.println("Insertion of 2 List");
         intersectionOf2List();
         System.out.println("-------------------------------");

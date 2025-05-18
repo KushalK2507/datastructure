@@ -114,6 +114,10 @@ public class CircularLinkedList {
 
     public void reversal(){
 
+        if (head == null){
+            throw new RuntimeException("List Is Empty");
+        }
+
         SingleLinkedListNode curr = head;
         SingleLinkedListNode prev = null;
         SingleLinkedListNode temp ;

@@ -34,12 +34,15 @@ public class JumpGame {
         int curr =-1;
         int next =0;
         int ans =0;
-        for (int i=0;next<len;i++){
+         for (int i=0;next<arr.length;i++){
+            next = Math.max(next,arr[i]+i);
             if (i> curr){
                 ans++;
                 curr=next;
             }
-            next = Math.max(next,arr[i]+i);
+            if (next > arr.length){
+                return ans;
+            }
 
         }
         return ans;

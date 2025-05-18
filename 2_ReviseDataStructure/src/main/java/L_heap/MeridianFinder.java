@@ -14,6 +14,11 @@ public class MeridianFinder {
         maxHeap.offer(num);
     }
 
+    public void printQueue(){
+        System.out.println(maxHeap);
+        System.out.println(minHeap);
+    }
+
     public double findMedian(){
         return (maxHeap.peek()+minHeap.peek())/2.0;
     }
