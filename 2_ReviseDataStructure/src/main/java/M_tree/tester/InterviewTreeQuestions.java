@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import M_tree.*;
+import M_tree.node.TreeNodeNextPointer;
 
 public class InterviewTreeQuestions {
 
@@ -203,12 +204,12 @@ public class InterviewTreeQuestions {
 
   private static void populateTheNextPointer() {
     PopulateNextPointer populateNextPointer = new PopulateNextPointer();
-    var root = populateNextPointer.insert(null, 1);
-    populateNextPointer.insert(root, 2);
-    populateNextPointer.insert(root, 3);
-    populateNextPointer.insert(root, 4);
-    populateNextPointer.insert(root, 5);
-    populateNextPointer.insert(root, 7);
+    var root = new TreeNodeNextPointer(1);
+    root.left = new TreeNodeNextPointer(2);
+    root.right = new TreeNodeNextPointer(3);
+    root.left.left = new TreeNodeNextPointer(4);
+    root.left.right = new TreeNodeNextPointer(5);
+    root.right.right = new TreeNodeNextPointer(7);
 
     System.out.println("Before Populate next Pointer");
     populateNextPointer.levelOrderTraversal(root);

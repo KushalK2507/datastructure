@@ -1,5 +1,7 @@
 package M_tree;
 
+import M_tree.node.TreeNodeNextPointer;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -10,37 +12,23 @@ public class PopulateNextPointer {
   public void populateNextPointer(TreeNodeNextPointer root) {
 
     Queue<TreeNodeNextPointer> queue = new LinkedList<>();
-    List<TreeNodeNextPointer> nodes = new ArrayList<>();
     queue.add(root);
     while (!queue.isEmpty()) {
-      var currentNode = queue.poll();
-      nodes.add(currentNode);
-      if (currentNode.left != null) {
-        queue.offer(currentNode.left);
+      var size = queue.size();
+      TreeNodeNextPointer prev = null;
+
+      for (int i = 0; i < size; i++) {
+        TreeNodeNextPointer node = queue.poll();
+
+        if (prev != null) {
+          prev.nextPointer = node;
+        }
+        prev = node;
+
+        if (node.left != null) queue.offer(node.left);
+        if (node.right != null) queue.offer(node.right);
       }
-      if (currentNode.right != null) {
-        queue.offer(currentNode.right);
       }
-    }
-
-    for (int i = 1; i < nodes.size() - 1; i++) {
-      nodes.get(i).nextPointer = nodes.get(i + 1);
-    }
-  }
-
-  public TreeNodeNextPointer insert(TreeNodeNextPointer root, int val) {
-
-    if (root == null) {
-      TreeNodeNextPointer node = new TreeNodeNextPointer();
-      node.value = val;
-      return node;
-    }
-    if (val < root.value) {
-      root.left = insert(root.left, val);
-    } else if (val > root.value) {
-      root.right = insert(root.right, val);
-    }
-    return root;
   }
 
   public void levelOrderTraversal(TreeNodeNextPointer root) {
@@ -59,12 +47,4 @@ public class PopulateNextPointer {
       }
     }
   }
-}
-
-class TreeNodeNextPointer {
-
-  int value;
-  TreeNodeNextPointer left;
-  TreeNodeNextPointer right;
-  TreeNodeNextPointer nextPointer;
 }
