@@ -20,7 +20,7 @@ public class CollectorsImplementation {
         students.add(new Student("xb",21,"M"));
         students.add(new Student("eryt",27,"F"));
 
-        Comparator<Student> s = (s1,s2) -> s1.getAge() > s2.getAge() ? -1 : s1.getAge() == s2.getAge() ? 0 :1;
+        Comparator<Student> s = (s1,s2) -> Integer.compare(s2.getAge(), s1.getAge());
 
         Map<String,Long> genderCount = students.stream().filter(st ->st.getGender()!=null).collect(Collectors.groupingBy(Student :: getGender,Collectors.counting()));
         genderCount.forEach((gender,count) -> System.out.println("Gender : "+gender+" Its count is: "+count));

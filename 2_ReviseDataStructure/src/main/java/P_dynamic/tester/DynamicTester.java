@@ -107,8 +107,8 @@ public class DynamicTester {
     private static void coinChange(){
 
         CoinChange coinChange = new CoinChange();
-        int[] coins ={1,2,5};
-        System.out.print(coinChange.coinChange(coins,11));
+        int[] coins ={1,2,3};
+        System.out.println(coinChange.noOfCoinsCombinationToTargetAmount(coins,coins.length,5));
 
     }
 
