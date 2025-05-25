@@ -79,6 +79,16 @@ public class ArraysTester {
 
         rotateArray();
         System.out.println("--------------------------------");
+
+        intToRoman();
+        System.out.println("--------------------------------");
+
+    }
+
+    private static void intToRoman(){
+        int num =4;
+        NumberToRoman numberToRoman = new NumberToRoman();
+        System.out.println("Roman Number of "+num+" is "+numberToRoman.numberToRoman(num));
     }
 
     private static void rotateArray(){
