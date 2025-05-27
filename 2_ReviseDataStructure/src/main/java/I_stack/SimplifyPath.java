@@ -15,8 +15,14 @@ public class SimplifyPath {
     public String simplifyPath(){
         String[] splittedPath = givenPath.split("/");
         for (String ele:splittedPath){
-            if (!ele.equals("..") && !ele.equals(".") && !ele.isBlank()){
-                path.push(ele);
+            if (!ele.equals(".") && !ele.isBlank()){
+                if (ele.equals("..") && !path.isEmpty()){
+                    path.pop();
+                }
+                else if (!ele.equals("..")){
+                    path.push(ele);
+                }
+
             }
         }
 
