@@ -30,19 +30,16 @@ public class JumpGame {
 
     public int minSteps(){
 
-        int len = arr.length-1;
         int curr =-1;
         int next =0;
         int ans =0;
-         for (int i=0;next<arr.length;i++){
-            next = Math.max(next,arr[i]+i);
+         for (int i=0;next<arr.length-1;i++){
+
             if (i> curr){
                 ans++;
                 curr=next;
             }
-            if (next > arr.length){
-                return ans;
-            }
+             next = Math.max(next,arr[i]+i);
 
         }
         return ans;
