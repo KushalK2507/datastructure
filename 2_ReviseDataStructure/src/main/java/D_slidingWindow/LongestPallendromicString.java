@@ -1,5 +1,8 @@
 package D_slidingWindow;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class LongestPallendromicString {
 
     String s;
@@ -8,6 +11,7 @@ public class LongestPallendromicString {
         this.s = s;
     }
 
+// LongestSubstring repeating character
     public String longestString(){
         int start =0;
         int end =0;
@@ -34,4 +38,27 @@ public class LongestPallendromicString {
         }
         return right-left-1;
     }
+	
+	// Longest Substring WITHOUT repeating Character
+	public int lengthOfLongestSubstring(String s) {
+    Set<Character> seen = new HashSet<>();
+    int left = 0, right = 0, maxLen = 0;
+
+    while (right < s.length()) {
+        char c = s.charAt(right);
+
+        // If character is not in set, add and move right
+        if (!seen.contains(c)) {
+            seen.add(c);
+            right++;
+            maxLen = Math.max(maxLen, right - left);
+        } else {
+            // If duplicate, remove leftmost character and move left pointer
+            seen.remove(s.charAt(left));
+            left++;
+        }
+    }
+
+    return maxLen;
+}
 }

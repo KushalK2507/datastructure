@@ -39,4 +39,27 @@ public class MinSubArrayWithTargetSum {
             }
         return Arrays.copyOfRange(arr,endIndex-minLength+1,endIndex+1);
     }
+	
+	public int minSubArrayLengthwithoutConsecutiveElement(){
+		
+		 var start = 0;
+        var end = 0;
+        var sum =0;
+        var minLength=Integer.MAX_VALUE;
+        while(end < arr.length){
+            sum = sum+arr[end];
+            while(sum >= targetSum){
+                sum = sum-arr[start];
+                start++;
+                minLength = Math.min(minLength,end-start+1);
+            }
+            end++;
+        }
+
+        if(minLength == Integer.MAX_VALUE){
+           return 0;
+        }
+        return minLength+1;
+		
+	}
 }
