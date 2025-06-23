@@ -24,7 +24,7 @@ public class LowestCommonAncestor {
         TreeNode left = lca(node.left,pNode,qNode);
         TreeNode right = lca(node.right, pNode,qNode);
 
-    if (pNode != null && qNode != null) {
+    if (left != null && right != null) {
       return node;
     }
 

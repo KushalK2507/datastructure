@@ -200,10 +200,26 @@ public class BinaryTree {
   }
 
   public int KthSmallestElement(int k) {
-    var sortedTree = new ArrayList<Integer>();
-    sortedTree(this.getRootNode(), sortedTree);
+    Stack<TreeNode> stack = new Stack<>();
 
-    return sortedTree.get(k - 1);
+    TreeNode curr = rootNode;
+
+    while (curr != null || !stack.isEmpty()) {
+      // Go to leftmost node
+      while (curr != null) {
+        stack.push(curr);
+        curr = curr.left;
+      }
+
+      curr = stack.pop();
+      k--;
+
+      if (k == 0) return curr.val;
+
+      curr = curr.right;
+    }
+
+    return -1; // Invalid input
   }
 
   public int KthLargestElement(int k) {

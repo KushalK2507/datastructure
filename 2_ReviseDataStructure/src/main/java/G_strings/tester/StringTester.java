@@ -44,6 +44,9 @@ public class StringTester {
         occurrenceOfEachCharacterInString();
         System.out.println("----------------------------");
 
+        longestSubstringWithoutRepeatingCharacter();
+        System.out.println("---------------------------------");
+
         groupAnagram();
         System.out.println("----------------------------");
 
@@ -53,6 +56,11 @@ public class StringTester {
         isIsomprphicString();
         System.out.println("----------------------------");
 
+    }
+
+    private static void longestSubstringWithoutRepeatingCharacter(){
+        LongestSubstringWithoutRepeatingCharacter longestSubstringWithoutRepeatingCharacter = new LongestSubstringWithoutRepeatingCharacter();
+        System.out.println("Longest Substring without Repeating Character = "+longestSubstringWithoutRepeatingCharacter.longestSubstring("GEEKSFORGEEKS"));
     }
 
     private static void isIsomprphicString(){

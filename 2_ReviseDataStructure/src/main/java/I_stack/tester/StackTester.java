@@ -73,6 +73,7 @@ public class StackTester {
             stackMin.push(-2);
             stackMin.push(0);
             stackMin.push(-3);
+            System.out.println("Min Stack = "+stackMin.minStack);
             System.out.println("Min = "+stackMin.getMin());
             stackMin.pop();
             System.out.println("Top = "+stackMin.top());

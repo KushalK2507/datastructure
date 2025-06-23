@@ -7,28 +7,22 @@ import java.util.Map;
 public class Traingle {
 
     public int minPathSum(List<List<Integer>> triangle){
+        // Use bottom up approach
 
-        int[][] val = new int[triangle.size()][triangle.size()];
-        for (int[] temp: val){
-            Arrays.fill(temp,Integer.MAX_VALUE);
+        int n = triangle.size();
+
+        // Start from second last row and go up
+        for (int row = n - 2; row >= 0; row--) {
+            for (int col = 0; col < triangle.get(row).size(); col++) {
+                int curr = triangle.get(row).get(col);
+                int below = triangle.get(row + 1).get(col);
+                int belowRight = triangle.get(row + 1).get(col + 1);
+                triangle.get(row).set(col, curr + Math.min(below, belowRight));
+            }
         }
-        return findMinPathSum(triangle,0,0,val);
-    }
-    private int findMinPathSum(List<List<Integer>> input, int i, int j, int[][] val){
 
-       if (input.size() == i){
-           return 0;
-       }
+        // Top of the triangle now contains the minimum path sum
+        return triangle.get(0).get(0);
 
-       if (val[i][j] != Integer.MAX_VALUE){
-           return val[i][j];
-       }
-
-       //current value + next row value same i
-        int a = input.get(i).get(j)+findMinPathSum(input,i+1,j,val);
-        //current value + next row value same i+1
-       int b = input.get(i).get(j)+findMinPathSum(input,i+1,j+1,val);
-       val[i][j] = Math.min(a,b);
-       return val[i][j];
     }
 }

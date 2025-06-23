@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class StackMin {
 
-    Stack<Integer> minStack;
+    public Stack<Integer> minStack;
     int min;
 
     public StackMin(){

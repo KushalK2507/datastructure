@@ -12,36 +12,40 @@ public class SpiralMatrix {
     }
 
     public String spiralForm(){
+        
+        List<Integer> result = new LinkedList<>();
+        int noOfRows = matrix.length;
+        int noOfColumns = matrix[0].length;
+        int r=0;
+        int c=0;
+        while(r < noOfRows && c < noOfColumns){
 
-        if (matrix.length == 0 || (matrix.length != matrix[0].length)){
-            return res.append("Spiral form Not Possible").toString();
+           for(int i=c;i<noOfColumns;i++){
+               result.add(matrix[r][i]);
+           }
+           r++;
+           for(int j=r;j<noOfRows;j++){
+               result.add(matrix[j][noOfColumns-1]);
+           }
+           noOfColumns--;
+
+           if(r<noOfRows){
+
+               for(int i=noOfColumns-1;i>c-1;i--){
+                   result.add(matrix[noOfRows-1][i]);
+               }
+               noOfRows--;
+           }
+
+           if(c < noOfColumns){
+
+               for(int i=noOfRows-1;i>r-1;i--){
+                    result.add(matrix[i][c]);
+               }
+               c++;
+           }
         }
-        int row = 0;
-        int col =0;
-        int noOfRow = matrix.length-1;
-        int noOfColumn = matrix[0].length-1;
 
-
-        while (row < noOfRow || col < noOfColumn){
-
-          for (int i = row;i<=noOfColumn;i++){
-              res.append(matrix[row][i]).append(" ");
-          }
-          row++;
-          for (int i=row;i<noOfRow;i++){
-              res.append(matrix[i][noOfColumn]).append(" ");
-          }
-          noOfColumn--;
-          for (int i=noOfRow;i>=col;i--){
-              res.append(matrix[noOfRow][i]).append(" ");
-          }
-          noOfRow--;
-          for (int i=noOfColumn;i>=row;i--){
-              res.append(matrix[i][col]).append(" ");
-          }
-          col++;
-        }
-
-        return res.toString();
+        return result.toString();
     }
 }
