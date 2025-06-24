@@ -104,7 +104,15 @@ public class DynamicTester {
         System.out.print(traingle.minPathSum(triangle));
     }
 
-    private static void coinChange(){
+    private static void coinCombinationChange(){
+
+        CoinChange coinChange = new CoinChange();
+        int[] coins ={1,2,3};
+        System.out.println(coinChange.noOfCoinsCombinationToTargetAmount(coins,coins.length,5));
+
+    }
+	
+	    private static void numberOfMinCoin(){
 
         CoinChange coinChange = new CoinChange();
         int[] coins ={1,2,3};

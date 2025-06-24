@@ -69,5 +69,13 @@ public class Practise {
 //
 //        result.forEach(System.out::println);
 
+        String []  input = {"apple","apple","aeroplane","fruit","banana"};
+        var count = Arrays.stream(input).collect(Collectors.groupingBy(ele -> ele.charAt(0),Collectors.counting()))
+
+                .entrySet().stream()
+                .max(Comparator.comparingLong(Map.Entry::getValue));
+
+        System.out.println("Max Count ="+count.get().getValue());
+
     }
 }
