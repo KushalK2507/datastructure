@@ -1,5 +1,8 @@
 package E_matrix;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class SpiralMatrix {
 
     int[][] matrix;

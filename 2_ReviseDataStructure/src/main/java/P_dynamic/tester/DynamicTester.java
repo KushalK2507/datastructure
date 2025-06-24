@@ -56,9 +56,14 @@ public class DynamicTester {
         System.out.println("--------------------");
 
         //CoinChange
-        coinChange();
+        coinCombinationChange();
         System.out.println();
         System.out.println("--------------------");
+
+        numberOfMinCoin();
+        System.out.println();
+        System.out.println("--------------------");
+
 
         //Traingle To tp Bottom Min Sum
         topToBottomMinSum();
@@ -77,6 +82,9 @@ public class DynamicTester {
         System.out.println();
         System.out.println("--------------------");
 
+    }
+
+    private static void coinChange() {
     }
 
     private static void squareRootOfNumber(){
@@ -116,7 +124,7 @@ public class DynamicTester {
 
         CoinChange coinChange = new CoinChange();
         int[] coins ={1,2,3};
-        System.out.println(coinChange.noOfCoinsCombinationToTargetAmount(coins,coins.length,5));
+        System.out.println(coinChange.numberOfMinCoin(coins,5));
 
     }
 
