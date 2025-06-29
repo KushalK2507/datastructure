@@ -2,9 +2,7 @@ package O_graph.DijsktraAlgo;
 
 import O_graph.node.WeightedGraphNode;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class DijsktraAlgo {
 
@@ -28,20 +26,43 @@ public class DijsktraAlgo {
             sourceNode.weightGraph.put(targetNode,weight);
         }
     }
+/*
+Set<WeightedGraphNode> visited = new HashSet<>();
+PriorityQueue<WeightedGraphNode> queue = new PriorityQueue<>();
 
+source.distance = 0;
+queue.add(source);
+
+while (!queue.isEmpty()) {
+    WeightedGraphNode current = queue.poll();
+
+    if (visited.contains(current)) continue;
+    visited.add(current);
+
+    for (WeightedGraphNode neighbor : current.neighbours) {
+        int newDist = current.distance + current.weightGraph.get(neighbor);
+        if (newDist < neighbor.distance) {
+            neighbor.distance = newDist;
+            neighbor.parent = current;
+            queue.add(neighbor); // no need to remove; distance used only when polling
+        }
+    }
+ */
     public void dijsktraAlgo(String source, String target){
         var pathFound = false;
         PriorityQueue<WeightedGraphNode> queue = new PriorityQueue<>();
+        Set<WeightedGraphNode> visited = new HashSet<>();
         graph.get(0).distance = 0;
         queue.addAll(graph);
         while (!queue.isEmpty()){
             var currentNode = queue.remove();
+            if (visited.contains(currentNode)) continue;
+            visited.add(currentNode);
             var neighbours = currentNode.neighbours;
             for (WeightedGraphNode neighbour: neighbours){
                 if (neighbour.distance > currentNode.distance+currentNode.weightGraph.get(neighbour)){
                     neighbour.distance = currentNode.distance+currentNode.weightGraph.get(neighbour);
                     neighbour.parent = currentNode;
-                    queue.remove(neighbour);
                     queue.add(neighbour);
                 }
             }

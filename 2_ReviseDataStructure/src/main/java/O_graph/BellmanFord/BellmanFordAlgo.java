@@ -54,8 +54,13 @@ public class BellmanFordAlgo {
         }
         for (WeightedGraphNode graphNode:graph){
             if (graphNode.val.equals(target.val)){
-                System.out.print("Path exist from source: "+source.val+" to target is: "+target.val+" and path is: ");
-                printPath(graphNode,source,false);
+                if (graphNode.distance == Integer.MAX_VALUE) {
+                    System.out.println("No path exists from source: " + source.val + " to target: " + target.val);
+                } else {
+                    System.out.print("Path exists from source: " + source.val + " to target: " + target.val + " and path is: ");
+                    printPath(graphNode, source,false);
+                    System.out.println("\nTotal cost: " + graphNode.distance);
+                }
             }
         }
     }

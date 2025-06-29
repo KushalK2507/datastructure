@@ -23,7 +23,7 @@ public class StringUtils {
 
 
     public String removeSpecialCharacters(String s){
-        return s.replaceAll("[^a-zA-z0-9]","");
+        return s.replaceAll("[^a-zA-Z0-9]","");
     }
 
     public String removeWhiteSpaces(String s){

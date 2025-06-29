@@ -24,12 +24,11 @@ public class IntervalRanges {
             if (++val != arr[i+1]){
                 if (start != end){
                     result.add(start+"->"+end);
-                    start = arr[i+1];
                 }
                 else {
                     result.add(String.valueOf(end));
-                    start = arr[i+1];
                 }
+                start = arr[i+1];
             }
         }
 

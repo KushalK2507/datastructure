@@ -107,10 +107,6 @@ public class InterviewQuestionTester {
         System.out.println("Updated List ");
         list.traversal();
 
-
-
-
-
     }
 
     private static void removeElementsWhichAreDuplicate(){
@@ -271,7 +267,9 @@ public class InterviewQuestionTester {
         list2.head.next.next.next.next = list1.head.next.next.next.next;
 
         IntersectionOf2List intersection = new IntersectionOf2List(list1,list2);
-        System.out.println("InterSection Start from = "+intersection.intersectionOf2List().value);
+        System.out.println("InterSection Start from = with O(n2) complexity "+intersection.intersectionOfLinkedList(list1,list2).value);
+        System.out.println("InterSection Start from = with Collection "+intersection.intersectionOfLinkedListUsingCollection(list1,list2).value);
+        System.out.println("InterSection Start from = with O(1) space complexity "+intersection.interSectionOfLinkedListWithLessSpaceComplexity(list1,list2).value);
 
     }
 

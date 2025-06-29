@@ -60,7 +60,6 @@ public class IntersectionOf2Lists {
             }
             linkedListNode1 = linkedListNode1.next;
         }
-
         return null;
     }
 }
