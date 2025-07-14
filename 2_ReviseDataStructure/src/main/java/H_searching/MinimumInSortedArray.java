@@ -15,15 +15,15 @@ public class MinimumInSortedArray {
         int end = arr.length-1;
         int min = Integer.MAX_VALUE;
 
-        while (start <= end){
-            int mid = (end+start)/2;
-            if (arr[mid] > arr[start] && arr[mid] < arr[end]){
-                end = mid-1;
-            }
-            else {
-                start= mid+1;
-            }
-            min = Math.min(min,arr[mid]);
+    while (start <= end) {
+      var mid = (end + start) / 2;
+      if (arr[mid] > arr[end]) {
+        start = mid + 1;
+
+      } else {
+        end = mid - 1;
+      }
+      min = Math.min(min, arr[mid]);
         }
 
         return min;

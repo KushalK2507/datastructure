@@ -1,4 +1,6 @@
-package F_sorting;
+package F_sorting.interview;
+
+import F_sorting.QuickSort;
 
 import java.util.Arrays;
 

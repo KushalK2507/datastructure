@@ -6,22 +6,27 @@ import java.util.Queue;
 
 public class MeridianFinder {
 
-    Queue<Integer> maxHeap = new PriorityQueue<>();
-    Queue<Integer> minHeap = new PriorityQueue<>(Collections.reverseOrder());
+    Queue<Integer> minHeap ;
+    Queue<Integer> maxHeap ;
 
-    public void addNum(int num){
-        minHeap.offer(num);
+    public MeridianFinder() {
+        minHeap = new PriorityQueue<>();
+        maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+    }
+    
+    public void addNum(int num) {
         maxHeap.offer(num);
+
+        minHeap.offer(maxHeap.poll());
+        if(maxHeap.size() < minHeap.size()){
+            maxHeap.offer(minHeap.poll());
+        }
     }
-
-    public void printQueue(){
-        System.out.println(maxHeap);
-        System.out.println(minHeap);
+    
+    public double findMedian() {
+        if(maxHeap.size() == minHeap.size()){
+            return (minHeap.peek()+maxHeap.peek())/2.0;
+        }
+        return maxHeap.peek();
     }
-
-    public double findMedian(){
-        return (maxHeap.peek()+minHeap.peek())/2.0;
-    }
-
-
 }

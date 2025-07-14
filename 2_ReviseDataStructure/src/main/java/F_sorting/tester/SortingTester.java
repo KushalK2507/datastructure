@@ -1,6 +1,9 @@
 package F_sorting.tester;
 
 import F_sorting.*;
+import F_sorting.interview.DutchNationalFlag;
+import F_sorting.interview.RearrangeArrayInMinMaxForm;
+import F_sorting.interview.SquareOfSortedArray;
 
 import java.util.Arrays;
 

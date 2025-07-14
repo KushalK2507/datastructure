@@ -1,11 +1,11 @@
 package A_recursion;
 
-public class Fibanacii {
+public class A_Fibanacii {
     int n;
     int first;
     int second;
 
-    public Fibanacii(int n){
+    public A_Fibanacii(int n){
         this.n = n;
         first = 0;
         second = 1;

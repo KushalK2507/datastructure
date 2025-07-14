@@ -1,4 +1,4 @@
-package F_sorting;
+package F_sorting.interview;
 
 public class DutchNationalFlag {
 

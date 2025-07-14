@@ -170,13 +170,13 @@ public class RecursionTester {
     }
 
     private static void fibonacciSeriesSum(){
-        Fibanacii fibanacii = new Fibanacii(5);
+        A_Fibanacii fibanacii = new A_Fibanacii(5);
         System.out.print(fibanacii.sumOfFibonacciSeries());
         System.out.println();
     }
 
     private static void fibonacciSeriesRecursion(){
-        Fibanacii fibanacii = new Fibanacii(5);
+        A_Fibanacii fibanacii = new A_Fibanacii(5);
         for (int i=0;i<5;i++){
             System.out.print(fibanacii.fibonacciSeriesRecursion(i)+" ");
         }
@@ -185,7 +185,7 @@ public class RecursionTester {
     }
 
     private static void fibonacci(){
-        Fibanacii fibanacii = new Fibanacii(5);
+        A_Fibanacii fibanacii = new A_Fibanacii(5);
         fibanacii.fibonacciSeries();
         System.out.println();
     }
