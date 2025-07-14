@@ -1,4 +1,4 @@
-package N_hashing.openAddressing;
+package N_hashing.B_openAddressing;
 
 public class QuadraticProbing extends OpenAddressing {
 

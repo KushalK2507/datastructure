@@ -1,12 +1,11 @@
 package M_tree;
 
-import java.util.*;
-
 import M_tree.node.TreeNode;
+import java.util.*;
 import lombok.Getter;
 
 @Getter
-public class BinaryTree {
+public class A_BinaryTree {
   TreeNode rootNode;
 
   public void insert(int val) {

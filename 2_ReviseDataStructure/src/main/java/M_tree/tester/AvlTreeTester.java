@@ -1,12 +1,12 @@
 package M_tree.tester;
 
-import M_tree.AvlTree;
+import M_tree.B_AvlTree;
 
 public class AvlTreeTester {
 
   public static void main(String[] args) {
 
-    AvlTree tree = new AvlTree();
+    B_AvlTree tree = new B_AvlTree();
     tree.insert(10);
     tree.insert(20);
     tree.insert(30);

@@ -1,13 +1,12 @@
 package M_tree;
 
+import M_tree.node.AvlTreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
-
-import M_tree.node.AvlTreeNode;
 import lombok.Getter;
 
 @Getter
-public class AvlTree {
+public class B_AvlTree {
 
   AvlTreeNode rootNode;
 

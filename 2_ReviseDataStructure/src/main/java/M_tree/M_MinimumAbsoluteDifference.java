@@ -1,11 +1,10 @@
 package M_tree;
 
+import M_tree.node.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
-import M_tree.node.TreeNode;
-
-public class MinimumAbsoluteDifference {
+public class M_MinimumAbsoluteDifference {
 
   public int minimumAbsoluteDifference(TreeNode node) {
 

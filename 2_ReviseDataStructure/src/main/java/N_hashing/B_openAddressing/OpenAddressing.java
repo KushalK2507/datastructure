@@ -1,4 +1,4 @@
-package N_hashing.openAddressing;
+package N_hashing.B_openAddressing;
 
 import java.util.ArrayList;
 

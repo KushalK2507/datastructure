@@ -1,14 +1,14 @@
 package M_tree.tester;
 
+import M_tree.A_BinaryTree;
 import java.util.ArrayList;
 import java.util.List;
-import M_tree.BinaryTree;
 
 public class BinaryTreeTester {
 
   public static void main(String[] args) {
 
-    BinaryTree tree = new BinaryTree();
+    A_BinaryTree tree = new A_BinaryTree();
     createTree(tree);
 
     System.out.println("Pre order = ");
@@ -115,7 +115,7 @@ public class BinaryTreeTester {
     System.out.println("-------------------------------");
   }
 
-  public static void createTree(BinaryTree tree) {
+  public static void createTree(A_BinaryTree tree) {
     tree.insert(8);
     tree.insert(5);
     tree.insert(7);

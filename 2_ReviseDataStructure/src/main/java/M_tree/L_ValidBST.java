@@ -2,10 +2,7 @@ package M_tree;
 
 import M_tree.node.TreeNode;
 
-import java.util.LinkedList;
-import java.util.List;
-
-public class ValidBST {
+public class L_ValidBST {
 
   public boolean isValidBst(TreeNode node) {
 

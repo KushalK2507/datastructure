@@ -1,12 +1,11 @@
 package M_tree;
 
+import M_tree.node.TreeNode;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import M_tree.node.TreeNode;
-
-public class AverageOfEachLevelOfLevelOrderTraversal {
+public class K_AverageOfEachLevelOfLevelOrderTraversal {
 
   public List<Double> averageOfLevelOrder(TreeNode node) {
 

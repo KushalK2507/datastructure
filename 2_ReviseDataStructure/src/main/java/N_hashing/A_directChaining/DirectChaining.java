@@ -1,4 +1,4 @@
-package N_hashing.directChaining;
+package N_hashing.A_directChaining;
 
 import java.util.LinkedList;
 

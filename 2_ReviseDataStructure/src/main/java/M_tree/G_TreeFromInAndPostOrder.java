@@ -1,21 +1,20 @@
 package M_tree;
 
 import M_tree.node.TreeNode;
-
 import java.util.HashMap;
 import java.util.Map;
 
-public class TreeFromInAndPostOrder {
+public class G_TreeFromInAndPostOrder {
 
-    Map<Integer,Integer> inOrderValueToIndex;
+  Map<Integer, Integer> inOrderValueToIndex;
 
-    public TreeFromInAndPostOrder(){
-        inOrderValueToIndex = new HashMap<>();
-    }
+  public G_TreeFromInAndPostOrder() {
+    inOrderValueToIndex = new HashMap<>();
+  }
 
-    public TreeNode binaryTree(int[] inOrder, int[] postOrder){
+  public TreeNode binaryTree(int[] inOrder, int[] postOrder) {
 
-        for (int i=0;i<inOrder.length;i++){
+    for (int i = 0; i < inOrder.length; i++) {
             inOrderValueToIndex.put(inOrder[i],i );
             }
             return buildBinaryTree(postOrder,0,postOrder.length-1,inOrder,0,inOrder.length-1,inOrderValueToIndex);

@@ -2,7 +2,7 @@ package M_tree;
 
 import M_tree.node.TreeNode;
 
-public class MaxPathSum {
+public class N_MaxPathSum {
 
   public int maxPathSum(TreeNode node) {
 

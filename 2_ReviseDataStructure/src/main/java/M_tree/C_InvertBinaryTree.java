@@ -2,7 +2,7 @@ package M_tree;
 
 import M_tree.node.TreeNode;
 
-public class InvertBinaryTree {
+public class C_InvertBinaryTree {
 
   public void invertTree(TreeNode root) {
 

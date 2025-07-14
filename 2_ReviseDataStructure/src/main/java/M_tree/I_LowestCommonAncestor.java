@@ -2,17 +2,17 @@ package M_tree;
 
 import M_tree.node.TreeNode;
 
-public class LowestCommonAncestor {
+public class I_LowestCommonAncestor {
 
-    public TreeNode lowestCommonAncestor(TreeNode node, int p, int q){
+  public TreeNode lowestCommonAncestor(TreeNode node, int p, int q) {
 
-        TreeNode pNode = searchNode(node, p);
-        TreeNode qNode = searchNode(node, q);
-        if (pNode == null || qNode == null){
-            return null;
-        }
+    TreeNode pNode = searchNode(node, p);
+    TreeNode qNode = searchNode(node, q);
+    if (pNode == null || qNode == null) {
+      return null;
+    }
 
-        return lca(node.left,pNode,qNode);
+    return lca(node.left, pNode, qNode);
     }
 
     private TreeNode lca(TreeNode node, TreeNode pNode, TreeNode qNode){
