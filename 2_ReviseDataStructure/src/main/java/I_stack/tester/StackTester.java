@@ -37,26 +37,26 @@ public class StackTester {
 
     }
 
-    public static void simplifyPath(){
+  public static void simplifyPath() {
 
-        SimplifyPath simplifyPath = new SimplifyPath("/home/");
-        System.out.println("Simplified Path = "+simplifyPath.simplifyPath());
+    F_SimplifyPath FSimplifyPath = new F_SimplifyPath("/home/");
+    System.out.println("Simplified Path = " + FSimplifyPath.simplifyPath());
 
-        SimplifyPath simplifyPath1 = new SimplifyPath("/../");
-        System.out.println("Simplified Path 1 = "+simplifyPath1.simplifyPath());
+    F_SimplifyPath FSimplifyPath1 = new F_SimplifyPath("/../");
+    System.out.println("Simplified Path 1 = " + FSimplifyPath1.simplifyPath());
 
-        SimplifyPath simplifyPath2 = new SimplifyPath("/home//foo/");
-        System.out.println("Simplified Path 2 = "+simplifyPath2.simplifyPath());
+    F_SimplifyPath FSimplifyPath2 = new F_SimplifyPath("/home//foo/");
+    System.out.println("Simplified Path 2 = " + FSimplifyPath2.simplifyPath());
 
-        SimplifyPath simplifyPath3 = new SimplifyPath("//home/test");
-        System.out.println("Simplified Path 3 = "+simplifyPath3.simplifyPath());
+    F_SimplifyPath FSimplifyPath3 = new F_SimplifyPath("//home/test");
+    System.out.println("Simplified Path 3 = " + FSimplifyPath3.simplifyPath());
 
-        SimplifyPath simplifyPath4 = new SimplifyPath("//");
-        System.out.println("Simplified Path 4 = "+simplifyPath4.simplifyPath());
-    }
+    F_SimplifyPath FSimplifyPath4 = new F_SimplifyPath("//");
+    System.out.println("Simplified Path 4 = " + FSimplifyPath4.simplifyPath());
+  }
 
     public static void stackUsing2Queue(){
-        StackUsingQueue stackUsingArray = new StackUsingQueue();
+    E_StackUsingQueue stackUsingArray = new E_StackUsingQueue();
         stackUsingArray.push(1);
         stackUsingArray.push(4);
         System.out.println("Peek Element = "+stackUsingArray.peek());
@@ -67,47 +67,43 @@ public class StackTester {
         System.out.println("Pop Element = "+stackUsingArray.pop());
     }
 
-    public static void minStack(){
+  public static void minStack() {
 
-            StackMin stackMin = new StackMin();
-            stackMin.push(-2);
-            stackMin.push(0);
-            stackMin.push(-3);
-            System.out.println("Min Stack = "+stackMin.minStack);
-            System.out.println("Min = "+stackMin.getMin());
-            stackMin.pop();
-            System.out.println("Top = "+stackMin.top());
-            System.out.println("Min = "+stackMin.getMin());
+    D_StackMin DStackMin = new D_StackMin();
+    DStackMin.push(-2);
+    DStackMin.push(0);
+    DStackMin.push(-3);
+    System.out.println("Min Stack = " + DStackMin.minStack);
+    System.out.println("Min = " + DStackMin.getMin());
+    DStackMin.pop();
+    System.out.println("Top = " + DStackMin.top());
+    System.out.println("Min = " + DStackMin.getMin());
+  }
 
+  public static void reverseString() {
 
-    }
+    String s = "Hello";
+    G_ReverseStringUsingStack GReverseStringUsingStack = new G_ReverseStringUsingStack(s);
+    System.out.println("Reversed String = " + GReverseStringUsingStack.reverseString());
+  }
 
-    public static void reverseString(){
+  public static void validParenthesis() {
 
-        String s = "Hello";
-        ReverseStringUsingStack reverseStringUsingStack = new ReverseStringUsingStack(s);
-        System.out.println("Reversed String = "+reverseStringUsingStack.reverseString());
+    String input = "()(){()}[][()]";
+    C_ValidParenthesis CValidParenthesis = new C_ValidParenthesis(input);
+    System.out.println("Is Valid parenthesis = " + CValidParenthesis.isValidParenthesis());
 
-    }
+    String input1 = "()(){()}[][()";
+    C_ValidParenthesis CValidParenthesis1 = new C_ValidParenthesis(input1);
+    System.out.println("Is Valid parenthesis = " + CValidParenthesis1.isValidParenthesis());
 
-    public static void validParenthesis(){
-
-        String input = "()(){()}[][()]";
-        ValidParenthesis validParenthesis = new ValidParenthesis(input);
-        System.out.println("Is Valid parenthesis = "+validParenthesis.isValidParenthesis());
-
-        String input1 = "()(){()}[][()";
-        ValidParenthesis validParenthesis1 = new ValidParenthesis(input1);
-        System.out.println("Is Valid parenthesis = "+validParenthesis1.isValidParenthesis());
-
-        String input2 = "()(){()[][()";
-        ValidParenthesis validParenthesis2 = new ValidParenthesis(input2);
-        System.out.println("Is Valid parenthesis = "+validParenthesis2.isValidParenthesis());
-
-    }
+    String input2 = "()(){()[][()";
+    C_ValidParenthesis CValidParenthesis2 = new C_ValidParenthesis(input2);
+    System.out.println("Is Valid parenthesis = " + CValidParenthesis2.isValidParenthesis());
+  }
 
     public static void stackList(){
-        StackUsingList stackUsingArray = new StackUsingList();
+    B_StackUsingList stackUsingArray = new B_StackUsingList();
         stackUsingArray.push(1);
         stackUsingArray.push(4);
         System.out.println("Peek Element = "+stackUsingArray.peek());
@@ -117,15 +113,16 @@ public class StackTester {
         stackUsingArray.push(10);
         System.out.println("Pop Element = "+stackUsingArray.pop());
     }
-    public static void stackArray(){
-        StackUsingArray stackUsingArray = new StackUsingArray(5);
-        stackUsingArray.push(1);
-        stackUsingArray.push(4);
-        System.out.println("Peek Element = "+stackUsingArray.peek());
-        System.out.println("Pop Element = "+stackUsingArray.pop());
-        stackUsingArray.push(8);
-        System.out.println("Peek Element = "+stackUsingArray.peek());
-        stackUsingArray.push(10);
-        System.out.println("Pop Element = "+stackUsingArray.pop());
-    }
+
+  public static void stackArray() {
+    A_StackUsingArray AStackUsingArray = new A_StackUsingArray(5);
+    AStackUsingArray.push(1);
+    AStackUsingArray.push(4);
+    System.out.println("Peek Element = " + AStackUsingArray.peek());
+    System.out.println("Pop Element = " + AStackUsingArray.pop());
+    AStackUsingArray.push(8);
+    System.out.println("Peek Element = " + AStackUsingArray.peek());
+    AStackUsingArray.push(10);
+    System.out.println("Pop Element = " + AStackUsingArray.pop());
+  }
 }

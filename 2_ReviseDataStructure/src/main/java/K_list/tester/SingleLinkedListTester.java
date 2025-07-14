@@ -1,35 +1,34 @@
 package K_list.tester;
 
-import K_list.SinglyLinkedList;
+import K_list.A_SinglyLinkedList;
 
 public class SingleLinkedListTester {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-        singlyLinkedList.create(5);
-        singlyLinkedList.insertAtFirst(4);
-        singlyLinkedList.insertAtLast(10);
-        singlyLinkedList.insertInMid(6);
-        singlyLinkedList.insertInMid(2);
-        singlyLinkedList.insertInMid(9);
-        System.out.print("Traversal = ");
-        singlyLinkedList.traversal();
-        singlyLinkedList.deleteAtFirst();
-        System.out.print("After deletion At first Traversal = ");
-        singlyLinkedList.traversal();
+    A_SinglyLinkedList ASinglyLinkedList = new A_SinglyLinkedList();
+    ASinglyLinkedList.create(5);
+    ASinglyLinkedList.insertAtFirst(4);
+    ASinglyLinkedList.insertAtLast(10);
+    ASinglyLinkedList.insertInMid(6);
+    ASinglyLinkedList.insertInMid(2);
+    ASinglyLinkedList.insertInMid(9);
+    System.out.print("Traversal = ");
+    ASinglyLinkedList.traversal();
+    ASinglyLinkedList.deleteAtFirst();
+    System.out.print("After deletion At first Traversal = ");
+    ASinglyLinkedList.traversal();
 
-        singlyLinkedList.deleteAtLast();
-        System.out.print("After deletion At Last Traversal = ");
-        singlyLinkedList.traversal();
+    ASinglyLinkedList.deleteAtLast();
+    System.out.print("After deletion At Last Traversal = ");
+    ASinglyLinkedList.traversal();
 
-        singlyLinkedList.deleteAtSpecificPosition(2);
-        System.out.print("After deletion At position 2 Traversal = ");
-        singlyLinkedList.traversal();
+    ASinglyLinkedList.deleteAtSpecificPosition(2);
+    System.out.print("After deletion At position 2 Traversal = ");
+    ASinglyLinkedList.traversal();
 
-        singlyLinkedList.deleteSpecificElement(2);
-        System.out.print("After deletion \"2\" element Traversal = ");
-        singlyLinkedList.traversal();
-
+    ASinglyLinkedList.deleteSpecificElement(2);
+    System.out.print("After deletion \"2\" element Traversal = ");
+    ASinglyLinkedList.traversal();
     }
 }

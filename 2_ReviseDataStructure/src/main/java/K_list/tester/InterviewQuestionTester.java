@@ -1,7 +1,6 @@
 package K_list.tester;
 
 import K_list.*;
-
 import java.util.Set;
 
 public class InterviewQuestionTester {
@@ -71,7 +70,7 @@ public class InterviewQuestionTester {
 
     private static void sortList(){
 
-        SinglyLinkedList list = new SinglyLinkedList();
+    A_SinglyLinkedList list = new A_SinglyLinkedList();
         list.create(1);
         list.insertAtLast(5);
         list.insertAtLast(2);
@@ -82,7 +81,7 @@ public class InterviewQuestionTester {
 
         System.out.println("Original List ");
         list.traversal();
-        SortListUsingMergeSort sort = new SortListUsingMergeSort(list);
+    N_SortListUsingMergeSort sort = new N_SortListUsingMergeSort(list);
         sort.sortList(list.head);
         System.out.println("Updated list ");
         list.traversal();
@@ -91,7 +90,7 @@ public class InterviewQuestionTester {
     }
 
     private static void rotateListNTimes(){
-        SinglyLinkedList list = new SinglyLinkedList();
+    A_SinglyLinkedList list = new A_SinglyLinkedList();
         list.create(1);
         list.insertAtLast(3);
         list.insertAtLast(5);
@@ -101,8 +100,8 @@ public class InterviewQuestionTester {
         list.insertAtLast(13);
         System.out.println("Original List ");
         list.traversal();
-        int rotateTimes = 5;
-        RotateListNTimes rotate = new RotateListNTimes(list,rotateTimes);
+    int rotateTimes = 5;
+    M_RotateListNTimes rotate = new M_RotateListNTimes(list, rotateTimes);
         rotate.rotateList();
         System.out.println("Updated List ");
         list.traversal();
@@ -111,85 +110,88 @@ public class InterviewQuestionTester {
 
     private static void removeElementsWhichAreDuplicate(){
 
-        SinglyLinkedList list = new SinglyLinkedList();
+    A_SinglyLinkedList list = new A_SinglyLinkedList();
         list.create(1);
         list.insertAtLast(1);
         list.insertAtLast(1);
-        list.insertAtLast(2);
-        list.insertAtLast(2);
-        list.insertAtLast(3);
-        list.insertAtLast(4);
-        list.insertAtLast(5);
-        list.insertAtLast(5);
-        list.insertAtLast(6);
+    list.insertAtLast(2);
+    list.insertAtLast(2);
+    list.insertAtLast(3);
+    list.insertAtLast(4);
+    list.insertAtLast(5);
+    list.insertAtLast(5);
+    list.insertAtLast(6);
 
-        System.out.println("Original List ");
-        list.traversal();
-        RemoveDuplicatesFromSortedList removeDuplicatesFromSortedList = new RemoveDuplicatesFromSortedList(list);
-        removeDuplicatesFromSortedList.removeDuplicateFromSortedList();
-        System.out.println("Updated List ");
-        list.traversal();
+    System.out.println("Original List ");
+    list.traversal();
+    L_RemoveDuplicatesFromSortedList KRemoveDuplicatesFromSortedList =
+        new L_RemoveDuplicatesFromSortedList(list);
+    KRemoveDuplicatesFromSortedList.removeDuplicateFromSortedList();
+    System.out.println("Updated List ");
+    list.traversal();
 
-        SinglyLinkedList list1 = new SinglyLinkedList();
-        list1.create(1);
-        list1.insertAtLast(1);
-        list1.insertAtLast(1);
-        list1.insertAtLast(2);
-        list1.insertAtLast(2);
-        list1.insertAtLast(3);
-        list1.insertAtLast(4);
-        list1.insertAtLast(5);
-        list1.insertAtLast(5);
-        list1.insertAtLast(6);
+    A_SinglyLinkedList list1 = new A_SinglyLinkedList();
+    list1.create(1);
+    list1.insertAtLast(1);
+    list1.insertAtLast(1);
+    list1.insertAtLast(2);
+    list1.insertAtLast(2);
+    list1.insertAtLast(3);
+    list1.insertAtLast(4);
+    list1.insertAtLast(5);
+    list1.insertAtLast(5);
+    list1.insertAtLast(6);
 
-        System.out.println("Original List ");
-        list1.traversal();
-        RemoveDuplicatesFromSortedList removeDuplicatesFromSortedList1 = new RemoveDuplicatesFromSortedList(list1);
-       removeDuplicatesFromSortedList1.removeElementsWhichAreDuplicate();
-        System.out.println("Updated List ");
-        list1.traversal();
-    }
+    System.out.println("Original List ");
+    list1.traversal();
+    L_RemoveDuplicatesFromSortedList KRemoveDuplicatesFromSortedList1 =
+        new L_RemoveDuplicatesFromSortedList(list1);
+    KRemoveDuplicatesFromSortedList1.removeElementsWhichAreDuplicate();
+    System.out.println("Updated List ");
+    list1.traversal();
+  }
 
     private static void removeKthElementFromEnd(){
-        SinglyLinkedList list = new SinglyLinkedList();
-        list.create(1);
-        list.insertAtLast(1);
-        list.insertAtLast(2);
-        list.insertAtLast(4);
-        list.insertAtLast(5);
-        list.insertAtLast(8);
-        list.insertAtLast(10);
-        System.out.print("Original list ");
-        list.traversal();
-        int kthFromEnd = 4;
-        RemoveKthElementFromEnd removeKthElementFromEnd = new RemoveKthElementFromEnd(list,kthFromEnd);
-        removeKthElementFromEnd.removeKthElementFromEnd();
-        System.out.print("Updated List ");
-        list.traversal();
-        System.out.println();
-
-    }
+    A_SinglyLinkedList list = new A_SinglyLinkedList();
+    list.create(1);
+    list.insertAtLast(1);
+    list.insertAtLast(2);
+    list.insertAtLast(4);
+    list.insertAtLast(5);
+    list.insertAtLast(8);
+    list.insertAtLast(10);
+    System.out.print("Original list ");
+    list.traversal();
+    int kthFromEnd = 4;
+    K_RemoveKthElementFromEnd JRemoveKthElementFromEnd =
+        new K_RemoveKthElementFromEnd(list, kthFromEnd);
+    JRemoveKthElementFromEnd.removeKthElementFromEnd();
+    System.out.print("Updated List ");
+    list.traversal();
+    System.out.println();
+  }
 
     private static void reverseListInGroup(){
 
-        SinglyLinkedList list = new SinglyLinkedList();
-        list.create(1);
-        list.insertAtLast(2);
-        list.insertAtLast(3);
-        list.insertAtLast(4);
-        list.insertAtLast(5);
+    A_SinglyLinkedList list = new A_SinglyLinkedList();
+    list.create(1);
+    list.insertAtLast(2);
+    list.insertAtLast(3);
+    list.insertAtLast(4);
+    list.insertAtLast(5);
 
-        System.out.print("Original List ");
-        list.traversal();
-        ReverseLinkedListInGivenGroup reverseLinkedListInGivenGroup = new ReverseLinkedListInGivenGroup(list,2,4);
-        reverseLinkedListInGivenGroup.reverseListInGroup();
-        System.out.print("Updated List ");
-        list.traversal();
-        System.out.println();
-    }
+    System.out.print("Original List ");
+    list.traversal();
+    J_ReverseLinkedListInGivenGroup IReverseLinkedListInGivenGroup =
+        new J_ReverseLinkedListInGivenGroup(list, 2, 4);
+    IReverseLinkedListInGivenGroup.reverseListInGroup();
+    System.out.print("Updated List ");
+    list.traversal();
+    System.out.println();
+  }
 
     private static void deepCopyList(){
-        ListWithRandom list = new ListWithRandom();
+    I_ListWithRandom list = new I_ListWithRandom();
         list.create(7);
         list.insertAtLast(13);
         list.insertAtLast(11);
@@ -205,8 +207,8 @@ public class InterviewQuestionTester {
         System.out.println("Final List ");
         list.traversal();
 
-        DeepCopyOfLinkedList deepCopy = new DeepCopyOfLinkedList(list);
-        var newList = deepCopy.deepCopy();
+    I_DeepCopyOfLinkedList deepCopy = new I_DeepCopyOfLinkedList(list);
+    var newList = deepCopy.deepCopy();
         System.out.println("Deep Copy List");
         newList.traversal();
 
@@ -214,44 +216,42 @@ public class InterviewQuestionTester {
 
     public static void swapElements(){
 
-        SinglyLinkedList list = new SinglyLinkedList();
+    A_SinglyLinkedList list = new A_SinglyLinkedList();
         list.create(5);
-        list.insertAtFirst(4);
-        list.insertAtFirst(3);
-        list.insertAtFirst(9);
-        list.insertAtFirst(10);
-        list.insertAtLast(1);
-        list.insertAtLast(2);
-        list.insertAtLast(0);
+    list.insertAtFirst(4);
+    list.insertAtFirst(3);
+    list.insertAtFirst(9);
+    list.insertAtFirst(10);
+    list.insertAtLast(1);
+    list.insertAtLast(2);
+    list.insertAtLast(0);
 
-        System.out.print("Original List = ");
-        list.traversal();
-        SwapElements swapElements = new SwapElements(list,0);
-        swapElements.swap();
-        System.out.print("Updated list = ");
-        list.traversal();
+    System.out.print("Original List = ");
+    list.traversal();
+    H_SwapElements GSwapElements = new H_SwapElements(list, 0);
+    GSwapElements.swap();
+    System.out.print("Updated list = ");
+    list.traversal();
 
+    A_SinglyLinkedList list1 = new A_SinglyLinkedList();
+    list1.create(3);
+    list1.insertAtLast(5);
+    list1.insertAtLast(8);
+    list1.insertAtLast(5);
+    list1.insertAtLast(10);
+    list1.insertAtLast(2);
+    list1.insertAtLast(1);
+    list1.insertAtLast(0);
 
+    list1.traversal();
+    H_SwapElements GSwapElements1 = new H_SwapElements(list1, 0);
+    GSwapElements1.swapNodes();
+    list1.traversal();
+  }
 
-        SinglyLinkedList list1 = new SinglyLinkedList();
-        list1.create(3);
-        list1.insertAtLast(5);
-        list1.insertAtLast(8);
-        list1.insertAtLast(5);
-        list1.insertAtLast(10);
-        list1.insertAtLast(2);
-        list1.insertAtLast(1);
-        list1.insertAtLast(0);
-
-        list1.traversal();
-        SwapElements swapElements1 = new SwapElements(list1,0);
-        swapElements1.swapNodes();
-        list1.traversal();
-
-    }
     private static void intersectionOf2List(){
 
-        SinglyLinkedList list1 = new SinglyLinkedList();
+    A_SinglyLinkedList list1 = new A_SinglyLinkedList();
         list1.create(1);
         list1.insertAtLast(2);
         list1.insertAtLast(3);
@@ -259,14 +259,14 @@ public class InterviewQuestionTester {
         list1.insertAtLast(5);
         list1.insertAtLast(6);
 
-        SinglyLinkedList list2 = new SinglyLinkedList();
+    A_SinglyLinkedList list2 = new A_SinglyLinkedList();
         list2.create(1);
         list2.insertAtLast(2);
         list2.insertAtLast(3);
         list2.insertAtLast(4);
         list2.head.next.next.next.next = list1.head.next.next.next.next;
 
-        IntersectionOf2List intersection = new IntersectionOf2List(list1,list2);
+    G_IntersectionOf2List intersection = new G_IntersectionOf2List(list1, list2);
         System.out.println("InterSection Start from = with O(n2) complexity "+intersection.intersectionOfLinkedList(list1,list2).value);
         System.out.println("InterSection Start from = with Collection "+intersection.intersectionOfLinkedListUsingCollection(list1,list2).value);
         System.out.println("InterSection Start from = with O(1) space complexity "+intersection.interSectionOfLinkedListWithLessSpaceComplexity(list1,list2).value);
@@ -274,7 +274,7 @@ public class InterviewQuestionTester {
     }
 
     private static void exchangeNodeInList(){
-        SinglyLinkedList list = new SinglyLinkedList();
+    A_SinglyLinkedList list = new A_SinglyLinkedList();
         list.create(1);
         list.insertAtLast(2);
         list.insertAtLast(3);
@@ -284,58 +284,58 @@ public class InterviewQuestionTester {
         int k=2;
         System.out.print("Original List = ");
         list.traversal();
-        ExchangeNodeInLinkedList exchange = new ExchangeNodeInLinkedList(list,k);
+    E_ExchangeNodeInLinkedList exchange = new E_ExchangeNodeInLinkedList(list, k);
         exchange.exchangeNode();
         System.out.print("Updated List = ");
         list.traversal();
     }
 
-    private static void commonAndUnCommonElementInList(){
-        Set<Integer> set1=Set.of(2,4,6,8,10,12,14);
-        Set<Integer> set2 = Set.of(3,6,9,12,15,18);
+  private static void commonAndUnCommonElementInList() {
+    Set<Integer> set1 = Set.of(2, 4, 6, 8, 10, 12, 14);
+    Set<Integer> set2 = Set.of(3, 6, 9, 12, 15, 18);
 
-        CommonUnCommonElements commonUnCommonElements = new CommonUnCommonElements(set1,set2);
-        commonUnCommonElements.commonUnCommonElements();
+    D_CommonUnCommonElements DCommonUnCommonElements = new D_CommonUnCommonElements(set1, set2);
+    DCommonUnCommonElements.commonUnCommonElements();
+  }
 
-    }
+  private static void removeDuplicateFromSortedList() {
+    A_SinglyLinkedList ASinglyLinkedList = new A_SinglyLinkedList();
+    ASinglyLinkedList.create(1);
+    ASinglyLinkedList.insertAtLast(2);
+    ASinglyLinkedList.insertAtLast(2);
+    ASinglyLinkedList.insertAtLast(2);
+    ASinglyLinkedList.insertAtLast(3);
+    ASinglyLinkedList.insertAtLast(4);
+    ASinglyLinkedList.insertAtLast(4);
+    ASinglyLinkedList.insertAtLast(5);
+    ASinglyLinkedList.insertAtLast(5);
 
-    private static void removeDuplicateFromSortedList(){
-        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-        singlyLinkedList.create(1);
-        singlyLinkedList.insertAtLast(2);
-        singlyLinkedList.insertAtLast(2);
-        singlyLinkedList.insertAtLast(2);
-        singlyLinkedList.insertAtLast(3);
-        singlyLinkedList.insertAtLast(4);
-        singlyLinkedList.insertAtLast(4);
-        singlyLinkedList.insertAtLast(5);
-        singlyLinkedList.insertAtLast(5);
+    ASinglyLinkedList.traversal();
+    L_RemoveDuplicatesFromSortedList KRemoveDuplicatesFromSortedList =
+        new L_RemoveDuplicatesFromSortedList(ASinglyLinkedList);
+    var list = KRemoveDuplicatesFromSortedList.removeDuplicateFromSortedList();
+    ASinglyLinkedList.traversal(list.head);
+  }
 
-        singlyLinkedList.traversal();
-        RemoveDuplicatesFromSortedList removeDuplicatesFromSortedList = new RemoveDuplicatesFromSortedList(singlyLinkedList);
-        var list = removeDuplicatesFromSortedList.removeDuplicateFromSortedList();
-        singlyLinkedList.traversal(list.head);
+  private static void insertInSortedList() {
+    A_SinglyLinkedList ASinglyLinkedList = new A_SinglyLinkedList();
+    ASinglyLinkedList.create(1);
+    ASinglyLinkedList.insertAtLast(2);
+    ASinglyLinkedList.insertAtLast(3);
+    ASinglyLinkedList.insertAtLast(4);
+    ASinglyLinkedList.insertAtLast(8);
 
-    }
-
-    private static void insertInSortedList(){
-        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
-        singlyLinkedList.create(1);
-        singlyLinkedList.insertAtLast(2);
-        singlyLinkedList.insertAtLast(3);
-        singlyLinkedList.insertAtLast(4);
-        singlyLinkedList.insertAtLast(8);
-
-        singlyLinkedList.traversal();
-        RemoveDuplicatesFromSortedList removeDuplicatesFromSortedList = new RemoveDuplicatesFromSortedList(singlyLinkedList);
-        var list = removeDuplicatesFromSortedList.removeDuplicateFromSortedList();
-        InsertInSortedList insertInSortedList = new InsertInSortedList(list);
-        var res = insertInSortedList.insertInSortedList(6);
-        singlyLinkedList.traversal(res.head);
-    }
+    ASinglyLinkedList.traversal();
+    L_RemoveDuplicatesFromSortedList KRemoveDuplicatesFromSortedList =
+        new L_RemoveDuplicatesFromSortedList(ASinglyLinkedList);
+    var list = KRemoveDuplicatesFromSortedList.removeDuplicateFromSortedList();
+    F_InsertInSortedList FInsertInSortedList = new F_InsertInSortedList(list);
+    var res = FInsertInSortedList.insertInSortedList(6);
+    ASinglyLinkedList.traversal(res.head);
+  }
 
     private static void detectAndRemoveLoop(){
-        DetectAndRemoveLoop list = new DetectAndRemoveLoop();
+    B_DetectAndRemoveLoop list = new B_DetectAndRemoveLoop();
         list.createListWithLoop();
         list.traversalOfList();
         var result = list.detectLoop() != null;
@@ -347,18 +347,18 @@ public class InterviewQuestionTester {
         list.traversalOfList();
     }
 
-    private static void reverseList(){
-        SinglyLinkedList list = new SinglyLinkedList();
-        list.create(1);
-        list.insertAtLast(2);
-        list.insertAtLast(3);
-        list.insertAtLast(4);
-        list.insertAtLast(5);
-        list.insertAtLast(6);
-        list.traversal();
+  private static void reverseList() {
+    A_SinglyLinkedList list = new A_SinglyLinkedList();
+    list.create(1);
+    list.insertAtLast(2);
+    list.insertAtLast(3);
+    list.insertAtLast(4);
+    list.insertAtLast(5);
+    list.insertAtLast(6);
+    list.traversal();
 
-        ReverseLinkedList reverseLinkedList = new ReverseLinkedList(list);
-        reverseLinkedList.reverseList();
-        list.traversal(reverseLinkedList.list.head);
-    }
+    B_ReverseLinkedList BReverseLinkedList = new B_ReverseLinkedList(list);
+    BReverseLinkedList.reverseList();
+    list.traversal(BReverseLinkedList.list.head);
+  }
 }

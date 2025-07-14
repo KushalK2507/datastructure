@@ -1,9 +1,9 @@
 package J_queue.tester;
 
-import J_queue.BinaryNumberUsingQueue;
-import J_queue.QueueUsing2Stack;
-import J_queue.QueueUsingArray;
-import J_queue.QueueUsingList;
+import J_queue.A_QueueUsingArray;
+import J_queue.B_QueueUsingList;
+import J_queue.C_BinaryNumberUsingQueue;
+import J_queue.D_QueueUsing2Stack;
 
 public class QueueTester {
 
@@ -26,7 +26,7 @@ public class QueueTester {
         System.out.println("----------------------------");
     }
     public static void queueUsing2Stack(){
-        QueueUsing2Stack queueUsingArray = new QueueUsing2Stack();
+    D_QueueUsing2Stack queueUsingArray = new D_QueueUsing2Stack();
         queueUsingArray.offer(5);
         queueUsingArray.offer(8);
         System.out.println("Peek = "+queueUsingArray.peek());
@@ -37,13 +37,13 @@ public class QueueTester {
         System.out.println("Peek = "+queueUsingArray.peek());
     }
 
-    public static void binaryNumber(){
-        BinaryNumberUsingQueue binaryNumberUsingQueue = new BinaryNumberUsingQueue(2);
-        System.out.println("Binary Number = "+binaryNumberUsingQueue.binNumber());
+  public static void binaryNumber() {
+    C_BinaryNumberUsingQueue CBinaryNumberUsingQueue = new C_BinaryNumberUsingQueue(2);
+    System.out.println("Binary Number = " + CBinaryNumberUsingQueue.binNumber());
+  }
 
-    }
     public static void queueUsingList(){
-        QueueUsingList queueUsingArray = new QueueUsingList();
+    B_QueueUsingList queueUsingArray = new B_QueueUsingList();
         queueUsingArray.offer(5);
         queueUsingArray.offer(8);
         System.out.println("Peek = "+queueUsingArray.peek());
@@ -53,18 +53,17 @@ public class QueueTester {
         System.out.println("Poll = "+queueUsingArray.poll());
         System.out.println("Peek = "+queueUsingArray.peek());
     }
-    public static void queueUsingArray(){
 
-        QueueUsingArray queueUsingArray = new QueueUsingArray(5);
-        queueUsingArray.offer(5);
-        queueUsingArray.offer(8);
-        System.out.println("Peek = "+queueUsingArray.peek());
-        System.out.println("Poll = "+queueUsingArray.poll());
-        System.out.println("Peek = "+queueUsingArray.peek());
-        queueUsingArray.offer(11);
-        System.out.println("Poll = "+queueUsingArray.poll());
-        System.out.println("Peek = "+queueUsingArray.peek());
+  public static void queueUsingArray() {
 
-    }
-
+    A_QueueUsingArray AQueueUsingArray = new A_QueueUsingArray(5);
+    AQueueUsingArray.offer(5);
+    AQueueUsingArray.offer(8);
+    System.out.println("Peek = " + AQueueUsingArray.peek());
+    System.out.println("Poll = " + AQueueUsingArray.poll());
+    System.out.println("Peek = " + AQueueUsingArray.peek());
+    AQueueUsingArray.offer(11);
+    System.out.println("Poll = " + AQueueUsingArray.poll());
+    System.out.println("Peek = " + AQueueUsingArray.peek());
+  }
 }
