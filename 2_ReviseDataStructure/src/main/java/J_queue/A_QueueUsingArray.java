@@ -12,22 +12,22 @@ public class A_QueueUsingArray {
     queue = new int[size];
   }
 
-    public void offer(int val){
-        if (top == -1){
-            top++;
-        }
-        end++;
-        queue[end] = val;
+  public void offer(int val) {
+    if (top == -1) {
+      top++;
     }
+    end++;
+    queue[end] = val;
+  }
 
-    public int poll(){
-        if (top == -1 || top == queue.length){
-            return -1;
-        }
-        return queue[top++];
+  public int poll() {
+    if (top == -1 || top == queue.length) {
+      return -1;
     }
+    return queue[top++];
+  }
 
-    public int peek(){
-        return queue[top];
-    }
+  public int peek() {
+    return queue[top];
+  }
 }

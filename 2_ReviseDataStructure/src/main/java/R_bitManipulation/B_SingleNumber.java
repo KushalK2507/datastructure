@@ -11,6 +11,6 @@ public class B_SingleNumber {
     for (int num : a) {
       result = result ^ num;
     }
-        return result;
-    }
+    return result;
+  }
 }

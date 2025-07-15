@@ -13,16 +13,16 @@ public class C_ReverseLinkedList {
   public void reverseList() {
 
     SingleLinkedListNode curr = list.head;
-        SingleLinkedListNode prev= null;
-        SingleLinkedListNode temp = null;
+    SingleLinkedListNode prev = null;
+    SingleLinkedListNode temp = null;
 
-        while (curr != null){
-            temp = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = temp;
-        }
-
-        list.head = prev;
+    while (curr != null) {
+      temp = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = temp;
     }
+
+    list.head = prev;
+  }
 }

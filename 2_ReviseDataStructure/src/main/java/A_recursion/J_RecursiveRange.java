@@ -13,9 +13,9 @@ public class J_RecursiveRange {
 
   public int recursiveRange(int n) {
     return IntStream.rangeClosed(0, n).reduce(0, Integer::sum);
-    }
+  }
 
-    public int recursiveRangeFormula(int n){
-        return n*((n+1)/2);
-    }
+  public int recursiveRangeFormula(int n) {
+    return n * ((n + 1) / 2);
+  }
 }

@@ -4,38 +4,36 @@ import I_stack.*;
 
 public class StackTester {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        System.out.println("Stack Using Array");
-        stackArray();
-        System.out.println("----------------------------");
+    System.out.println("Stack Using Array");
+    stackArray();
+    System.out.println("----------------------------");
 
-        System.out.println("Stack Using List");
-        stackList();
-        System.out.println("----------------------------");
+    System.out.println("Stack Using List");
+    stackList();
+    System.out.println("----------------------------");
 
-        System.out.println("Valid Parenthesis");
-        validParenthesis();
-        System.out.println("----------------------------");
+    System.out.println("Valid Parenthesis");
+    validParenthesis();
+    System.out.println("----------------------------");
 
-        System.out.println("Reverse String");
-        reverseString();
-        System.out.println("----------------------------");
+    System.out.println("Reverse String");
+    reverseString();
+    System.out.println("----------------------------");
 
-        System.out.println("Min Stack");
-        minStack();
-        System.out.println("----------------------------");
+    System.out.println("Min Stack");
+    minStack();
+    System.out.println("----------------------------");
 
-        System.out.println("Stack Using 2 Queue");
-        stackUsing2Queue();
-        System.out.println("----------------------------");
+    System.out.println("Stack Using 2 Queue");
+    stackUsing2Queue();
+    System.out.println("----------------------------");
 
-        System.out.println("Simplify Path");
-        simplifyPath();
-        System.out.println("----------------------------");
-
-
-    }
+    System.out.println("Simplify Path");
+    simplifyPath();
+    System.out.println("----------------------------");
+  }
 
   public static void simplifyPath() {
 
@@ -55,17 +53,17 @@ public class StackTester {
     System.out.println("Simplified Path 4 = " + FSimplifyPath4.simplifyPath());
   }
 
-    public static void stackUsing2Queue(){
+  public static void stackUsing2Queue() {
     E_StackUsingQueue stackUsingArray = new E_StackUsingQueue();
-        stackUsingArray.push(1);
-        stackUsingArray.push(4);
-        System.out.println("Peek Element = "+stackUsingArray.peek());
-        System.out.println("Pop Element = "+stackUsingArray.pop());
-        stackUsingArray.push(8);
-        System.out.println("Peek Element = "+stackUsingArray.peek());
-        stackUsingArray.push(10);
-        System.out.println("Pop Element = "+stackUsingArray.pop());
-    }
+    stackUsingArray.push(1);
+    stackUsingArray.push(4);
+    System.out.println("Peek Element = " + stackUsingArray.peek());
+    System.out.println("Pop Element = " + stackUsingArray.pop());
+    stackUsingArray.push(8);
+    System.out.println("Peek Element = " + stackUsingArray.peek());
+    stackUsingArray.push(10);
+    System.out.println("Pop Element = " + stackUsingArray.pop());
+  }
 
   public static void minStack() {
 
@@ -102,17 +100,17 @@ public class StackTester {
     System.out.println("Is Valid parenthesis = " + CValidParenthesis2.isValidParenthesis());
   }
 
-    public static void stackList(){
+  public static void stackList() {
     B_StackUsingList stackUsingArray = new B_StackUsingList();
-        stackUsingArray.push(1);
-        stackUsingArray.push(4);
-        System.out.println("Peek Element = "+stackUsingArray.peek());
-        System.out.println("Pop Element = "+stackUsingArray.pop());
-        stackUsingArray.push(8);
-        System.out.println("Peek Element = "+stackUsingArray.peek());
-        stackUsingArray.push(10);
-        System.out.println("Pop Element = "+stackUsingArray.pop());
-    }
+    stackUsingArray.push(1);
+    stackUsingArray.push(4);
+    System.out.println("Peek Element = " + stackUsingArray.peek());
+    System.out.println("Pop Element = " + stackUsingArray.pop());
+    stackUsingArray.push(8);
+    System.out.println("Peek Element = " + stackUsingArray.peek());
+    stackUsingArray.push(10);
+    System.out.println("Pop Element = " + stackUsingArray.pop());
+  }
 
   public static void stackArray() {
     A_StackUsingArray AStackUsingArray = new A_StackUsingArray(5);

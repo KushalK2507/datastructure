@@ -25,7 +25,7 @@ public class D_PopulateNextPointer {
         if (node.left != null) queue.offer(node.left);
         if (node.right != null) queue.offer(node.right);
       }
-      }
+    }
   }
 
   public void levelOrderTraversal(TreeNodeNextPointer root) {

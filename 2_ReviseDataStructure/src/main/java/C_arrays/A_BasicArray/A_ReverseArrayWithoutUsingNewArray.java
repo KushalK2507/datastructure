@@ -10,14 +10,14 @@ public class A_ReverseArrayWithoutUsingNewArray {
 
   public void reverseArray() {
 
-        int start =0;
-        int end =arr.length-1;
-        while (start < end){
-            int temp = arr[start];
-            arr[start] = arr[end];
-            arr[end] = temp;
-            start++;
-            end--;
-        }
+    int start = 0;
+    int end = arr.length - 1;
+    while (start < end) {
+      int temp = arr[start];
+      arr[start] = arr[end];
+      arr[end] = temp;
+      start++;
+      end--;
     }
+  }
 }

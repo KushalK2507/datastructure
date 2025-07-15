@@ -13,15 +13,15 @@ public class B_QueueUsingList {
     queue = new LinkedList<>();
   }
 
-    public void offer(int val){
-        queue.addFirst(val);
-    }
+  public void offer(int val) {
+    queue.addFirst(val);
+  }
 
-    public int poll(){
-        return queue.removeLast();
-    }
+  public int poll() {
+    return queue.removeLast();
+  }
 
-    public int peek(){
-        return queue.getLast();
-    }
+  public int peek() {
+    return queue.getLast();
+  }
 }

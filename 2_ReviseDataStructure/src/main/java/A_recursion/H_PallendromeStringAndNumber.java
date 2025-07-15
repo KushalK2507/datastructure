@@ -14,46 +14,45 @@ public class H_PallendromeStringAndNumber {
     this.s = s;
   }
 
-    public boolean isPallendromeStringRecursion(String s){
+  public boolean isPallendromeStringRecursion(String s) {
 
-        if (s.isBlank() || s.length()==1){
-            return true;
-        }
-
-        return s.charAt(0) == s.charAt(s.length()-1) && isPallendromeStringRecursion(s.substring(1,s.length()-1));
+    if (s.isBlank() || s.length() == 1) {
+      return true;
     }
 
-    public boolean isPallendromeString(){
+    return s.charAt(0) == s.charAt(s.length() - 1)
+        && isPallendromeStringRecursion(s.substring(1, s.length() - 1));
+  }
 
-        if (s.isBlank()){
-            return true;
-        }
+  public boolean isPallendromeString() {
 
-        return s.contentEquals(new StringBuilder(s).reverse());
+    if (s.isBlank()) {
+      return true;
     }
 
-    public boolean isNumberPallendrome(){
+    return s.contentEquals(new StringBuilder(s).reverse());
+  }
 
-        int orignaln= n;
-        int reverseNumber=0;
-        while (n>0){
-            reverseNumber =(reverseNumber*10)+(n%10);
-            n= n/10;
-        }
+  public boolean isNumberPallendrome() {
 
-        return reverseNumber == orignaln;
+    int orignaln = n;
+    int reverseNumber = 0;
+    while (n > 0) {
+      reverseNumber = (reverseNumber * 10) + (n % 10);
+      n = n / 10;
     }
 
-    public int isNumberPallendromeRecursion(int n, int temp){
+    return reverseNumber == orignaln;
+  }
 
-        if (n == 0){
-            return temp;
-        }
+  public int isNumberPallendromeRecursion(int n, int temp) {
 
-        temp = temp * 10 + n%10;
-
-        return isNumberPallendromeRecursion(n/10,temp);
+    if (n == 0) {
+      return temp;
     }
 
+    temp = temp * 10 + n % 10;
 
+    return isNumberPallendromeRecursion(n / 10, temp);
+  }
 }

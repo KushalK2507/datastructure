@@ -3,7 +3,6 @@ package C_arrays.tester;
 import C_arrays.A_BasicArray.*;
 import C_arrays.B_AdvanceArray.*;
 import C_arrays.D_2Pointers.A_ContainerWithMostWater;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,81 +10,80 @@ import java.util.stream.Collectors;
 
 public class ArraysTester {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        //Reverse Array without using new Array
-        reverseArrayWithoutUsingNewArray();
-        System.out.println("---------------------------------");
+    // Reverse Array without using new Array
+    reverseArrayWithoutUsingNewArray();
+    System.out.println("---------------------------------");
 
-        //Pair Each Element In Array
-        pairEachElementInArray();
-        System.out.println("--------------------------------");
+    // Pair Each Element In Array
+    pairEachElementInArray();
+    System.out.println("--------------------------------");
 
-        //missing Number in Array
-        missingNumberInArray();
-        System.out.println("--------------------------------");
+    // missing Number in Array
+    missingNumberInArray();
+    System.out.println("--------------------------------");
 
-        //largest and second largest in Array
-        secondLargestAndLargestInArray();
-        System.out.println("--------------------------------");
+    // largest and second largest in Array
+    secondLargestAndLargestInArray();
+    System.out.println("--------------------------------");
 
-        //check 2 array are indentical
-        check2ArrayAreIdentical();
-        System.out.println("--------------------------------");
+    // check 2 array are indentical
+    check2ArrayAreIdentical();
+    System.out.println("--------------------------------");
 
-        //check array are unique
-        arrayIsUnique();
-        System.out.println("--------------------------------");
+    // check array are unique
+    arrayIsUnique();
+    System.out.println("--------------------------------");
 
-        // move zeros at the end
-        movesZerosAtTheEnd();
-        System.out.println("--------------------------------");
+    // move zeros at the end
+    movesZerosAtTheEnd();
+    System.out.println("--------------------------------");
 
-        //Pair to target Sum
-        pairToTargetSum();
-        System.out.println("--------------------------------");
+    // Pair to target Sum
+    pairToTargetSum();
+    System.out.println("--------------------------------");
 
-        //Triplet to target Sum
-        tripletToTargetSum();
-        System.out.println("--------------------------------");
+    // Triplet to target Sum
+    tripletToTargetSum();
+    System.out.println("--------------------------------");
 
-        //remove Duplicate from Sorted Array
-        removeDuplicatesFromSortedArray();
-        System.out.println("--------------------------------");
+    // remove Duplicate from Sorted Array
+    removeDuplicatesFromSortedArray();
+    System.out.println("--------------------------------");
 
-        // Buy and Sell to max profit
-        maxBuyAndSellProfit();
-        System.out.println("--------------------------------");
+    // Buy and Sell to max profit
+    maxBuyAndSellProfit();
+    System.out.println("--------------------------------");
 
-        // Pascal Triangle
-        pascalTriangle();
-        System.out.println("--------------------------------");
+    // Pascal Triangle
+    pascalTriangle();
+    System.out.println("--------------------------------");
 
-        maxBuyAndSellProfit2();
-        System.out.println("--------------------------------");
+    maxBuyAndSellProfit2();
+    System.out.println("--------------------------------");
 
-        containerWithMostWater();
-        System.out.println("--------------------------------");
+    containerWithMostWater();
+    System.out.println("--------------------------------");
 
-        isJumpPossible();
-        System.out.println("--------------------------------");
+    isJumpPossible();
+    System.out.println("--------------------------------");
 
-        minStepsJumpPossible();
-        System.out.println("--------------------------------");
+    minStepsJumpPossible();
+    System.out.println("--------------------------------");
 
-        productAllExceptItself();
-        System.out.println("--------------------------------");
+    productAllExceptItself();
+    System.out.println("--------------------------------");
 
-        tappingRainWater();
-        System.out.println("--------------------------------");
+    tappingRainWater();
+    System.out.println("--------------------------------");
 
-        rotateArray();
-        System.out.println("--------------------------------");
+    rotateArray();
+    System.out.println("--------------------------------");
 
-        intToRoman();
-        System.out.println("--------------------------------");
-
-    }
+    intToRoman();
+    System.out.println("--------------------------------");
+  }
 
   private static void intToRoman() {
     int num = 4;
@@ -107,11 +105,13 @@ public class ArraysTester {
     System.out.println("MaxVol = " + QTappingRainWater.maxVol());
   }
 
-    private static void productAllExceptItself(){
+  private static void productAllExceptItself() {
     int[] arr = {10, 3, 5, 6, 2};
     I_ProductEachExceptItself productEachExceptItself = new I_ProductEachExceptItself(arr);
-        System.out.println("Result Product = "+Arrays.toString(productEachExceptItself.productAllExceptItselfInArray()));
-    }
+    System.out.println(
+        "Result Product = "
+            + Arrays.toString(productEachExceptItself.productAllExceptItselfInArray()));
+  }
 
   private static void isJumpPossible() {
     int[] arr = {2, 3, 1, 1, 4};
@@ -139,18 +139,18 @@ public class ArraysTester {
     System.out.println("Max Profit = " + KBuyAndSellMaxProfit.maxProfit);
   }
 
-    private static void pascalTriangle(){
+  private static void pascalTriangle() {
     F_PascalTriangle LPascalTriangle = new F_PascalTriangle(7);
-        System.out.println("Pascal Triangle");
+    System.out.println("Pascal Triangle");
     var result = LPascalTriangle.pascalTriangle();
-        for (int i=0;i<7;i++){
-            for (int j=i;j<=7;j++){
-                System.out.print(" ");
-            }
-            System.out.println(result.get(i).stream().map(String::valueOf).collect(Collectors.joining(" ")));
-        }
-
+    for (int i = 0; i < 7; i++) {
+      for (int j = i; j <= 7; j++) {
+        System.out.print(" ");
+      }
+      System.out.println(
+          result.get(i).stream().map(String::valueOf).collect(Collectors.joining(" ")));
     }
+  }
 
   private static void maxBuyAndSellProfit() {
     int[] arr = {7, 1, 5, 3, 6, 4};
@@ -164,7 +164,7 @@ public class ArraysTester {
     System.out.println("Max Profit = " + KBuyAndSellMaxProfit2.maxProfit);
   }
 
-    private static void removeDuplicatesFromSortedArray(){
+  private static void removeDuplicatesFromSortedArray() {
     int[] arr = {1, 1, 3, 3, 4, 5, 6, 6};
     D_RemoveDuplicatesFromSortedArray JRemoveDuplicatesFromSortedArray =
         new D_RemoveDuplicatesFromSortedArray(arr);
@@ -172,7 +172,7 @@ public class ArraysTester {
     System.out.println(
         "Removed Duplicates in Array"
             + Arrays.toString(JRemoveDuplicatesFromSortedArray.removeDuplicates()));
-    }
+  }
 
   private static void tripletToTargetSum() {
     int[] arr = {12, 3, 4, 1, 6, 9};
@@ -188,13 +188,13 @@ public class ArraysTester {
     System.out.println("Pair = " + Arrays.toString(HPairToTargetSumInArray.getPair()));
   }
 
-    private static void movesZerosAtTheEnd(){
+  private static void movesZerosAtTheEnd() {
     int[] arr = {0, 1, 3, 0, 0, 0, 9, 2, 5, 0};
     A_MoveZeroAtEnd GMoveZeroAtEnd = new A_MoveZeroAtEnd(arr);
     System.out.println("Orignal Array = " + Arrays.toString(arr));
     GMoveZeroAtEnd.moveZeroAtEnd();
     System.out.println("Move Zeros At end = " + Arrays.toString(arr));
-    }
+  }
 
   private static void arrayIsUnique() {
     int[] arr = {1, 2, 5, 6, 7, 8, 9};
@@ -229,7 +229,7 @@ public class ArraysTester {
             + DSecondLargestAndLargestInArray.secondLargest);
   }
 
-    private static void missingNumberInArray(){
+  private static void missingNumberInArray() {
     // If an array consist of N continuous digit then find missing number in an array.
     // Sum of First N Number = n(n+1)/2
     // Missing Number = Sum of first N Number - Sum of all elements in array
@@ -238,18 +238,18 @@ public class ArraysTester {
     int[] arr = {1, 2, 3, 4, 5, 0, 7, 8, 6};
     int lengthofArray = 9;
     int missingNumber = CMissingNumberInArray.missingNumberInArray(arr, lengthofArray);
-        System.out.println(missingNumber);
-    }
+    System.out.println(missingNumber);
+  }
 
-    private static void pairEachElementInArray(){
+  private static void pairEachElementInArray() {
 
     B_PairEachElementInArray BPairEachElementInArray = new B_PairEachElementInArray();
     List<List<Integer>> result = new ArrayList<>();
-        int[] arr = {1,2,3};
+    int[] arr = {1, 2, 3};
     BPairEachElementInArray.pairEachElement(result, arr, new ArrayList<>());
     System.out.println("Combination Size = " + result.size());
-        result.forEach(System.out::println);
-    }
+    result.forEach(System.out::println);
+  }
 
   public static void reverseArrayWithoutUsingNewArray() {
     int[] arr = {1, 2, 3, 4, 5};

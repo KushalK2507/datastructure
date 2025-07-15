@@ -11,8 +11,6 @@ public class C_MissingNumberInArray {
 
     int expectedSum = len * (len + 1) / 2;
 
-        return expectedSum-sum;
-
-    }
-
+    return expectedSum - sum;
+  }
 }

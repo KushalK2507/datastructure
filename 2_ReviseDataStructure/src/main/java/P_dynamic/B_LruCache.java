@@ -4,41 +4,38 @@ import java.util.*;
 
 public class B_LruCache {
 
-    Queue<Integer> cacheKey;
-    Map<Integer,Integer> keyToValue;
+  Queue<Integer> cacheKey;
+  Map<Integer, Integer> keyToValue;
 
-    int size;
+  int size;
 
-    public B_LruCache(int size){
-        cacheKey = new LinkedList<>();
-        keyToValue = new HashMap<>();
-        this.size = size;
+  public B_LruCache(int size) {
+    cacheKey = new LinkedList<>();
+    keyToValue = new HashMap<>();
+    this.size = size;
+  }
+
+  public void put(int key, int value) {
+
+    if (cacheKey.contains(key)) {
+      cacheKey.remove(key);
+    } else {
+      if (cacheKey.size() == size) {
+        int removedKey = cacheKey.poll();
+        keyToValue.remove(removedKey);
+      }
     }
+    cacheKey.offer(key);
+    keyToValue.put(key, value);
+  }
 
-    public void put(int key, int value){
+  public int get(int key) {
 
-       if (cacheKey.contains(key)){
-           cacheKey.remove(key);
-       }
-       else {
-           if (cacheKey.size() == size){
-               int removedKey = cacheKey.poll();
-               keyToValue.remove(removedKey);
-           }
-       }
-       cacheKey.offer(key);
-       keyToValue.put(key,value);
+    if (cacheKey.contains(key)) {
+      cacheKey.poll();
+      cacheKey.offer(key);
+      keyToValue.get(key);
     }
-
-    public int get(int key){
-
-        if (cacheKey.contains(key)){
-            cacheKey.poll();
-            cacheKey.offer(key);
-            keyToValue.get(key);
-        }
-        return keyToValue.getOrDefault(key,-1);
-
-    }
-
+    return keyToValue.getOrDefault(key, -1);
+  }
 }

@@ -15,18 +15,18 @@ public class C_TripletToTargetSum {
 
   public int[] tripletToTargetSum() {
 
-        for (int i=0;i<arr.length;i++){
-            int sum = target - arr[i];
-            Set<Integer> elements  = new HashSet<>();
-            for (int j=i+1;j<arr.length;j++){
-                int temp = sum - arr[j];
-                if (elements.contains(temp)){
-                    return new int[]{arr[i],arr[j],temp};
-                }
-                elements.add(arr[j]);
-            }
+    for (int i = 0; i < arr.length; i++) {
+      int sum = target - arr[i];
+      Set<Integer> elements = new HashSet<>();
+      for (int j = i + 1; j < arr.length; j++) {
+        int temp = sum - arr[j];
+        if (elements.contains(temp)) {
+          return new int[] {arr[i], arr[j], temp};
         }
-
-        return new int[]{-1,-1,-1};
+        elements.add(arr[j]);
+      }
     }
+
+    return new int[] {-1, -1, -1};
+  }
 }

@@ -34,5 +34,5 @@ public class CircularLinkedListTester {
     CCircularLinkedList.reversal();
     System.out.print("Reversed Linked List = ");
     CCircularLinkedList.traversal();
-    }
+  }
 }

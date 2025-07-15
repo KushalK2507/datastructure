@@ -11,27 +11,21 @@ public class A_MoveZeroAtEnd {
   public void moveZeroAtEnd() {
 
     int first = 0;
-        int second =1;
-        while (second < arr.length){
+    int second = 1;
+    while (second < arr.length) {
 
-            if (arr[first] == 0){
-                if (arr[second] == 0){
-                    second++;
-                }
-                else {
-                    arr[first] = arr[second];
-                    arr[second] = 0;
-                    second++;
-                    first++;
-                }
-            }
-            else {
-                first++;
-            }
+      if (arr[first] == 0) {
+        if (arr[second] == 0) {
+          second++;
+        } else {
+          arr[first] = arr[second];
+          arr[second] = 0;
+          second++;
+          first++;
         }
-
-
-
+      } else {
+        first++;
+      }
     }
-
+  }
 }

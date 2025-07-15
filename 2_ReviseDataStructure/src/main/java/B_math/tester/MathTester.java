@@ -6,16 +6,15 @@ import java.util.Arrays;
 
 public class MathTester {
 
+  public static void main(String[] args) {
 
-    public static void main(String[] args) {
+    // Plus One
+    plusOne();
+    System.out.println("-----------------------------");
 
-        // Plus One
-        plusOne();
-        System.out.println("-----------------------------");
-
-        primeNumber();
-        System.out.println("-----------------------------");
-    }
+    primeNumber();
+    System.out.println("-----------------------------");
+  }
 
   private static void primeNumber() {
     int number = 5;

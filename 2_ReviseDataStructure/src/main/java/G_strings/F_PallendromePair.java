@@ -17,28 +17,32 @@ public class F_PallendromePair {
     var count = 0;
     for (List<Integer> pair : result) {
       String combine = input[pair.get(0)] + input[pair.get(1)];
-            var eleToCount= combine.chars().mapToObj(ele -> (char)ele)
-                    .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
-            var oddCount = eleToCount.values().stream().filter(ele -> ele%2!=0).count();
-            if (oddCount <= 1){
-                count++;
-                pairIndex.add(pair);
-            }
-        }
-        System.out.println("Total Pair = "+count);
-        System.out.println("Pair = "+pairIndex);
+      var eleToCount =
+          combine
+              .chars()
+              .mapToObj(ele -> (char) ele)
+              .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+      var oddCount = eleToCount.values().stream().filter(ele -> ele % 2 != 0).count();
+      if (oddCount <= 1) {
+        count++;
+        pairIndex.add(pair);
+      }
     }
+    System.out.println("Total Pair = " + count);
+    System.out.println("Pair = " + pairIndex);
+  }
 
-    public static void combination(String[] input, int index, int k, List<Integer> combine, List<List<Integer>> result){
+  public static void combination(
+      String[] input, int index, int k, List<Integer> combine, List<List<Integer>> result) {
 
-        if(combine.size() == k){
+    if (combine.size() == k) {
       result.add(new ArrayList<>(combine));
-        }
-
-        for (int i=index;i<input.length;i++){
-            combine.add(i);
-            combination(input,i+1,k,combine,result);
-            combine.remove(combine.size()-1);
-        }
     }
+
+    for (int i = index; i < input.length; i++) {
+      combine.add(i);
+      combination(input, i + 1, k, combine, result);
+      combine.remove(combine.size() - 1);
+    }
+  }
 }

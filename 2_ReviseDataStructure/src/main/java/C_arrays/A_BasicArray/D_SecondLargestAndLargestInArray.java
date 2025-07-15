@@ -12,19 +12,17 @@ public class D_SecondLargestAndLargestInArray {
     largest = Integer.MIN_VALUE;
   }
 
-    public void compute(){
+  public void compute() {
 
-        for (int i=0;i<arr.length;i++){
+    for (int i = 0; i < arr.length; i++) {
 
-            if (arr[i] > largest){
-                secondLargest = largest;
-                largest = arr[i];
-            }
-            if (arr[i] > secondLargest && arr[i] < largest){
-                secondLargest = arr[i];
-            }
-        }
+      if (arr[i] > largest) {
+        secondLargest = largest;
+        largest = arr[i];
+      }
+      if (arr[i] > secondLargest && arr[i] < largest) {
+        secondLargest = arr[i];
+      }
     }
-
-
+  }
 }

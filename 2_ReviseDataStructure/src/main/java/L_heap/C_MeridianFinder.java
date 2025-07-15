@@ -15,18 +15,18 @@ public class C_MeridianFinder {
   }
 
   public void addNum(int num) {
-        maxHeap.offer(num);
+    maxHeap.offer(num);
 
-        minHeap.offer(maxHeap.poll());
-        if(maxHeap.size() < minHeap.size()){
-            maxHeap.offer(minHeap.poll());
-        }
+    minHeap.offer(maxHeap.poll());
+    if (maxHeap.size() < minHeap.size()) {
+      maxHeap.offer(minHeap.poll());
     }
-    
-    public double findMedian() {
-        if(maxHeap.size() == minHeap.size()){
-            return (minHeap.peek()+maxHeap.peek())/2.0;
-        }
-        return maxHeap.peek();
+  }
+
+  public double findMedian() {
+    if (maxHeap.size() == minHeap.size()) {
+      return (minHeap.peek() + maxHeap.peek()) / 2.0;
     }
+    return maxHeap.peek();
+  }
 }

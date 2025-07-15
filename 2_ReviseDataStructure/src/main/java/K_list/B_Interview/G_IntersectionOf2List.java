@@ -27,9 +27,9 @@ public class G_IntersectionOf2List {
         linkedList1HeadCopy = linkedList1HeadCopy.next;
       }
       linkedListHeadCopy = linkedListHeadCopy.next;
-        }
-        return null;
     }
+    return null;
+  }
 
   public SingleLinkedListNode intersectionOfLinkedListUsingCollection(
       A_SinglyLinkedList linkedList, A_SinglyLinkedList linkedList1) {
@@ -43,11 +43,11 @@ public class G_IntersectionOf2List {
     while (linkedListNode1 != null) {
       if (!singleLinkedListNodes.add(linkedListNode1)) {
         return linkedListNode1;
-            }
-            linkedListNode1 = linkedListNode1.next;
-        }
-        return null;
+      }
+      linkedListNode1 = linkedListNode1.next;
     }
+    return null;
+  }
 
   public SingleLinkedListNode interSectionOfLinkedListWithLessSpaceComplexity(
       A_SinglyLinkedList list1, A_SinglyLinkedList list2) {
@@ -61,18 +61,18 @@ public class G_IntersectionOf2List {
       }
     } else {
       for (int i = 0; i < list2Len - list1Len; i++) {
-                list2Head = list2Head.next;
-            }
-        }
-
-        while (list1Head != null && list2Head != null){
-            if (list1Head == list2Head){
-                return list1Head;
-            }
-            list1Head = list1Head.next;
-            list2Head = list2Head.next;
-        }
-
-        return null;
+        list2Head = list2Head.next;
+      }
     }
+
+    while (list1Head != null && list2Head != null) {
+      if (list1Head == list2Head) {
+        return list1Head;
+      }
+      list1Head = list1Head.next;
+      list2Head = list2Head.next;
+    }
+
+    return null;
+  }
 }

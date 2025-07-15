@@ -11,38 +11,36 @@ public class H_JumpGame {
   public boolean isJumpPossible() {
 
     if (arr.length <= 1) {
-            return true;
-        }
-        int jumpStart = arr[0];
-        int index=1;
-        while (jumpStart > 0){
+      return true;
+    }
+    int jumpStart = arr[0];
+    int index = 1;
+    while (jumpStart > 0) {
 
-            if (index == arr.length){
-                return true;
-            }
+      if (index == arr.length) {
+        return true;
+      }
 
-            jumpStart = Math.max(jumpStart-1,arr[index]);
-            index++;
-        }
-
-        return false;
+      jumpStart = Math.max(jumpStart - 1, arr[index]);
+      index++;
     }
 
-    public int minSteps(){
+    return false;
+  }
 
-        int curr =-1;
-        int next =0;
-        int ans =0;
-         for (int i=0;next<arr.length-1;i++){
+  public int minSteps() {
 
-            if (i> curr){
-                ans++;
-                curr=next;
-            }
-             next = Math.max(next,arr[i]+i);
+    int curr = -1;
+    int next = 0;
+    int ans = 0;
+    for (int i = 0; next < arr.length - 1; i++) {
 
-        }
-        return ans;
+      if (i > curr) {
+        ans++;
+        curr = next;
+      }
+      next = Math.max(next, arr[i] + i);
     }
-
+    return ans;
+  }
 }

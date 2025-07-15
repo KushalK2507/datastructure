@@ -11,6 +11,6 @@ public class A_BitwiseAndOfNumberRanges {
     }
 
     shift = left << shift; // left shift
-        return shift;
-    }
+    return shift;
+  }
 }

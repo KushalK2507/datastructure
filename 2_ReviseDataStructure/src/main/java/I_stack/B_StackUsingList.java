@@ -14,18 +14,17 @@ public class B_StackUsingList {
     stack.addLast(ele);
   }
 
-    public int pop(){
-        if (stack.isEmpty()){
-            throw  new RuntimeException("Stack is empty");
-        }
-        return stack.removeLast();
+  public int pop() {
+    if (stack.isEmpty()) {
+      throw new RuntimeException("Stack is empty");
     }
+    return stack.removeLast();
+  }
 
-    public int peek(){
-        if (stack.isEmpty()){
-            throw  new RuntimeException("Stack is empty");
-        }
-        return stack.getLast();
+  public int peek() {
+    if (stack.isEmpty()) {
+      throw new RuntimeException("Stack is empty");
     }
-
+    return stack.getLast();
+  }
 }

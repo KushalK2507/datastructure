@@ -12,20 +12,18 @@ public class C_SearchInsertionPosition {
 
   public int insertionPosition() {
 
-        int start =0;
-        int end =arr.length;
-        while (start <= end){
-            int mid = (end+start)/2;
-            if (targetElement == arr[mid]){
-                return mid;
-            }
-            else if (targetElement < arr[mid]){
-                end = mid-1;
-            }
-            else {
-                start = mid+1;
-            }
-        }
-        return start;
+    int start = 0;
+    int end = arr.length;
+    while (start <= end) {
+      int mid = (end + start) / 2;
+      if (targetElement == arr[mid]) {
+        return mid;
+      } else if (targetElement < arr[mid]) {
+        end = mid - 1;
+      } else {
+        start = mid + 1;
+      }
     }
+    return start;
+  }
 }

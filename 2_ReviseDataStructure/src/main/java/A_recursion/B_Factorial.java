@@ -11,18 +11,18 @@ public class B_Factorial {
   public int recursionFact(int n) {
 
     if (n == 1) {
-            return n;
-        }
-
-        return n * recursionFact(n-1);
+      return n;
     }
 
-    public int fact(){
-        int fact=1;
-        while (n > 0){
-            fact = fact*n;
-            n--;
-        }
-        return fact;
+    return n * recursionFact(n - 1);
+  }
+
+  public int fact() {
+    int fact = 1;
+    while (n > 0) {
+      fact = fact * n;
+      n--;
     }
+    return fact;
+  }
 }

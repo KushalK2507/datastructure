@@ -13,22 +13,22 @@ Input: nums = [7,7,7,7,7,7,7] Output: 1"
  */
 public class E_LongestIncreasingSubsequence {
 
-    public int longestSubsequence(int[] nums){
+  public int longestSubsequence(int[] nums) {
     List<Integer> tails = new ArrayList<>();
 
-        for (int num : nums) {
-        int idx = Collections.binarySearch(tails, num);
+    for (int num : nums) {
+      int idx = Collections.binarySearch(tails, num);
 
-        // If not found, binarySearch returns (-(insertion point) - 1)
-        if (idx < 0) idx = -(idx + 1);
+      // If not found, binarySearch returns (-(insertion point) - 1)
+      if (idx < 0) idx = -(idx + 1);
 
-        if (idx == tails.size()) {
-            tails.add(num);  // Extend the LIS
-        } else {
-            tails.set(idx, num);  // Replace with smaller candidate
-        }
+      if (idx == tails.size()) {
+        tails.add(num); // Extend the LIS
+      } else {
+        tails.set(idx, num); // Replace with smaller candidate
+      }
     }
 
-        return tails.size(); //
-        }
+    return tails.size(); //
+  }
 }

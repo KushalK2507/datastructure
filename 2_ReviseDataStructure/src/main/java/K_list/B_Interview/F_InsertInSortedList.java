@@ -22,14 +22,14 @@ public class F_InsertInSortedList {
         newNode.next = temp;
         isInserted = true;
         break;
-            }
-            listHead = listHead.next;
-        }
-
-        if (!isInserted){
-            listHead.next = newNode;
-        }
-
-        return list;
+      }
+      listHead = listHead.next;
     }
+
+    if (!isInserted) {
+      listHead.next = newNode;
+    }
+
+    return list;
+  }
 }

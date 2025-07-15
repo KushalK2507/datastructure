@@ -30,5 +30,5 @@ public class SingleLinkedListTester {
     ASinglyLinkedList.deleteSpecificElement(2);
     System.out.print("After deletion \"2\" element Traversal = ");
     ASinglyLinkedList.traversal();
-    }
+  }
 }

@@ -13,22 +13,20 @@ public class D_QueueUsing2Stack {
   }
 
   public void offer(int val) {
-        tempQueue.push(val);
-        while (!queue.isEmpty()){
-            tempQueue.push(queue.pop());
-        }
-        var temp = queue;
-        queue = tempQueue;
-        tempQueue = temp;
+    tempQueue.push(val);
+    while (!queue.isEmpty()) {
+      tempQueue.push(queue.pop());
     }
+    var temp = queue;
+    queue = tempQueue;
+    tempQueue = temp;
+  }
 
-    public int poll(){
-        return queue.pop();
-    }
+  public int poll() {
+    return queue.pop();
+  }
 
-    public int peek(){
-        return queue.peek();
-    }
-
-
+  public int peek() {
+    return queue.peek();
+  }
 }

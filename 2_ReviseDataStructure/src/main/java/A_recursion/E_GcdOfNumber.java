@@ -12,14 +12,14 @@ public class E_GcdOfNumber {
 
   public int gcdOfNumber(int a, int b) {
 
-        if (a<0 || b<0 ){
-            return -1;
-        }
-
-        if (b ==0){
-            return a;
-        }
-
-        return gcdOfNumber(b,a%b);
+    if (a < 0 || b < 0) {
+      return -1;
     }
+
+    if (b == 0) {
+      return a;
+    }
+
+    return gcdOfNumber(b, a % b);
+  }
 }

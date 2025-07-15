@@ -21,22 +21,22 @@ public class L_RemoveDuplicatesFromSortedList {
       }
     }
     return list;
-    }
+  }
 
-    public void removeElementsWhichAreDuplicate(){
-        var dummy = new SingleLinkedListNode(-1);
-        var prev = dummy;
-        dummy.next = list.head;
-        while (prev.next != null && prev.next.next != null){
-            if (prev.next.value == prev.next.next.value){
-                int val = prev.next.value;
-                while (prev.next.value == val){
-                    prev.next = prev.next.next;
-                }
-            }else {
-                prev = prev.next;
-            }
+  public void removeElementsWhichAreDuplicate() {
+    var dummy = new SingleLinkedListNode(-1);
+    var prev = dummy;
+    dummy.next = list.head;
+    while (prev.next != null && prev.next.next != null) {
+      if (prev.next.value == prev.next.next.value) {
+        int val = prev.next.value;
+        while (prev.next.value == val) {
+          prev.next = prev.next.next;
         }
-        list.head = dummy.next;
+      } else {
+        prev = prev.next;
+      }
     }
+    list.head = dummy.next;
+  }
 }

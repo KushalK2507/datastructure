@@ -12,15 +12,13 @@ public class E_SumOfNodeTillLeafNode {
 
     var newNumber = (number * 10) + node.val;
 
-        if (node.left == null && node.right== null){
-            return newNumber;
-        }
-
-        int leftSum = sumOfNodeTillLeadNode(node.left,newNumber);
-        int rightSum = sumOfNodeTillLeadNode(node.right,newNumber);
-
-        return leftSum+rightSum;
+    if (node.left == null && node.right == null) {
+      return newNumber;
     }
 
+    int leftSum = sumOfNodeTillLeadNode(node.left, newNumber);
+    int rightSum = sumOfNodeTillLeadNode(node.right, newNumber);
 
+    return leftSum + rightSum;
+  }
 }

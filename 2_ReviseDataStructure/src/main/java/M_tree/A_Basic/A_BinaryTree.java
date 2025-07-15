@@ -121,27 +121,25 @@ public class A_BinaryTree {
 
     if (node.left == null && node.right == null) {
       leafNodes.add(node.val);
-        }
-        leafNodes(node.left,leafNodes);
-        leafNodes(node.right,leafNodes);
+    }
+    leafNodes(node.left, leafNodes);
+    leafNodes(node.right, leafNodes);
+  }
+
+  public boolean searchElement(TreeNode node, int element) {
+
+    if (node == null) {
+      return false;
     }
 
-    public boolean searchElement(TreeNode node, int element){
-
-        if (node == null){
-            return false;
-        }
-
-        if (node.val == element){
-            return true;
-        }
-        else if (element < node.val){
-            return searchElement(node.left,element);
-        }
-        else{
-          return   searchElement(node.right,element);
-        }
+    if (node.val == element) {
+      return true;
+    } else if (element < node.val) {
+      return searchElement(node.left, element);
+    } else {
+      return searchElement(node.right, element);
     }
+  }
 
   public boolean searchUsingLevelOrder(TreeNode node, int element) {
 
@@ -297,7 +295,7 @@ public class A_BinaryTree {
     return max;
   }
 
-    private boolean isNodeNull(TreeNode node){
-        return node == null;
-    }
+  private boolean isNodeNull(TreeNode node) {
+    return node == null;
+  }
 }

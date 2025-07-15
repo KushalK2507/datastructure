@@ -15,28 +15,50 @@ public class F_TreeFromPreAndInOrder {
   public TreeNode binaryTree(int[] preOrder, int[] inOrder) {
 
     for (int i = 0; i < inOrder.length; i++) {
-            inOrderValueToIndex.put(inOrder[i],i);
-        }
-
-        return buildBinaryTree(preOrder,0,preOrder.length-1,inOrder,0,inOrder.length-1,inOrderValueToIndex);
-
+      inOrderValueToIndex.put(inOrder[i], i);
     }
 
-    private TreeNode buildBinaryTree(int[] preOrder, int preOrderStart, int preOrderEnd, int[] inOrder, int inOrderStart, int inOrderEnd,Map<Integer,Integer> inOrderValueToIndex){
+    return buildBinaryTree(
+        preOrder, 0, preOrder.length - 1, inOrder, 0, inOrder.length - 1, inOrderValueToIndex);
+  }
 
-        if (preOrderStart > preOrderEnd || inOrderStart > inOrderEnd){
-            return null;
-        }
+  private TreeNode buildBinaryTree(
+      int[] preOrder,
+      int preOrderStart,
+      int preOrderEnd,
+      int[] inOrder,
+      int inOrderStart,
+      int inOrderEnd,
+      Map<Integer, Integer> inOrderValueToIndex) {
 
-        var rootValue = preOrder[preOrderStart];
-        var root = new TreeNode(rootValue);
-        var rootValueIndex = inOrderValueToIndex.get(rootValue);
-        int lengthOfLeftSubTree =  rootValueIndex-inOrderStart;
-
-        root.left = buildBinaryTree(preOrder,preOrderStart+1,preOrderEnd+lengthOfLeftSubTree-1,inOrder,inOrderStart,rootValueIndex-1,inOrderValueToIndex);
-        root.right = buildBinaryTree(preOrder,preOrderStart+lengthOfLeftSubTree+1,preOrderEnd,inOrder,rootValueIndex+1,inOrderEnd,inOrderValueToIndex);
-
-        return root;
+    if (preOrderStart > preOrderEnd || inOrderStart > inOrderEnd) {
+      return null;
     }
 
+    var rootValue = preOrder[preOrderStart];
+    var root = new TreeNode(rootValue);
+    var rootValueIndex = inOrderValueToIndex.get(rootValue);
+    int lengthOfLeftSubTree = rootValueIndex - inOrderStart;
+
+    root.left =
+        buildBinaryTree(
+            preOrder,
+            preOrderStart + 1,
+            preOrderEnd + lengthOfLeftSubTree - 1,
+            inOrder,
+            inOrderStart,
+            rootValueIndex - 1,
+            inOrderValueToIndex);
+    root.right =
+        buildBinaryTree(
+            preOrder,
+            preOrderStart + lengthOfLeftSubTree + 1,
+            preOrderEnd,
+            inOrder,
+            rootValueIndex + 1,
+            inOrderEnd,
+            inOrderValueToIndex);
+
+    return root;
+  }
 }

@@ -17,29 +17,24 @@ public class D_SearchInSortedRotatedArray {
     int start = 0;
     int end = arr.length - 1;
     while (start <= end) {
-            int mid = (end+start)/2;
-            if (targetElement == arr[mid]){
-                return mid;
-            }
-            else if (arr[mid] > arr[start]){
-               if (targetElement <= arr[mid] && targetElement>=arr[start]){
-                   end = mid-1;
-               }
-               else {
-                   start = mid+1;
-               }
-            }
-            else if (arr[mid] < arr[start]){
-                if (targetElement >= arr[mid] && targetElement <= arr[start]){
-                    end = mid-1;
-                }
-                else {
-                    start = mid+1;
-                }
-            }
+      int mid = (end + start) / 2;
+      if (targetElement == arr[mid]) {
+        return mid;
+      } else if (arr[mid] > arr[start]) {
+        if (targetElement <= arr[mid] && targetElement >= arr[start]) {
+          end = mid - 1;
+        } else {
+          start = mid + 1;
         }
-
-        return -1;
-
+      } else if (arr[mid] < arr[start]) {
+        if (targetElement >= arr[mid] && targetElement <= arr[start]) {
+          end = mid - 1;
+        } else {
+          start = mid + 1;
+        }
+      }
     }
+
+    return -1;
+  }
 }

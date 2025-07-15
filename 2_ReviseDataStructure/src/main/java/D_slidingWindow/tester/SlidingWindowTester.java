@@ -7,20 +7,20 @@ import java.util.Arrays;
 
 public class SlidingWindowTester {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        //Longest SubArrayWithTargetSum
-        longestSubArrayWithTargetSum();
-        System.out.println("----------------------------");
+    // Longest SubArrayWithTargetSum
+    longestSubArrayWithTargetSum();
+    System.out.println("----------------------------");
 
-        //longest pallendromic string
-        longestPallendromicString();
-        System.out.println("----------------------------");
+    // longest pallendromic string
+    longestPallendromicString();
+    System.out.println("----------------------------");
 
-        // Min SubArray with Target Sum
-        minSubArrayWithTargetSum();
-        System.out.println("----------------------------");
-    }
+    // Min SubArray with Target Sum
+    minSubArrayWithTargetSum();
+    System.out.println("----------------------------");
+  }
 
   private static void longestSubArrayWithTargetSum() {
     int[] arr = {1, 2, 3, 1, 1, 1, 1};

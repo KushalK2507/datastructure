@@ -12,17 +12,16 @@ public class D_ReverseOfString {
     StringBuilder result = new StringBuilder();
     for (int i = s.length() - 1; i >= 0; i--) {
       result.append(s.charAt(i));
-        }
-        return result.toString();
+    }
+    return result.toString();
+  }
+
+  public String reverseStringUsingRecursion(String s) {
+
+    if (s.isEmpty()) {
+      return s;
     }
 
-    public String reverseStringUsingRecursion(String s){
-
-        if (s.isEmpty()){
-            return s;
-        }
-
-        return s.charAt(s.length()-1)+reverseStringUsingRecursion(s.substring(0,s.length()-1));
-    }
-
+    return s.charAt(s.length() - 1) + reverseStringUsingRecursion(s.substring(0, s.length() - 1));
+  }
 }

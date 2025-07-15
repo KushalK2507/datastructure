@@ -14,26 +14,26 @@ public class E_StackUsingQueue {
   }
 
   public void push(int val) {
-        tempStack.offer(val);
-        while (!stack.isEmpty()){
-            tempStack.offer(stack.poll());
-        }
-        var temp = stack;
-        stack = tempStack;
-        tempStack = temp;
+    tempStack.offer(val);
+    while (!stack.isEmpty()) {
+      tempStack.offer(stack.poll());
     }
+    var temp = stack;
+    stack = tempStack;
+    tempStack = temp;
+  }
 
-    public int peek(){
-        if (stack.isEmpty()){
-            return -1;
-        }
-     return stack.peek();
+  public int peek() {
+    if (stack.isEmpty()) {
+      return -1;
     }
+    return stack.peek();
+  }
 
-    public int pop(){
-        if (stack.isEmpty()){
-            return -1;
-        }
-        return stack.poll();
+  public int pop() {
+    if (stack.isEmpty()) {
+      return -1;
     }
+    return stack.poll();
+  }
 }

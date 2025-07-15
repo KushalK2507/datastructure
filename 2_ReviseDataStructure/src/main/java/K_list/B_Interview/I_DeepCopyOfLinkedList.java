@@ -36,28 +36,26 @@ public class I_DeepCopyOfLinkedList {
       curr = temp;
     }
 
-        // Copy Random
-         curr = list.head;
-        while (curr != null){
-            if (curr.next != null){
-                curr.next.random = curr.random != null ? curr.random.next : null;
-            }
-            curr= curr.next.next;
-        }
-
-        //Disconnecting new List
-        var original = list.head;
-        var originalCopy = list.head.next;
-        newList.head = originalCopy;
-        while (originalCopy.next != null){
-            original.next = original.next.next;
-            originalCopy.next = originalCopy.next.next;
-
-            original = original.next;
-            originalCopy = originalCopy.next;
-        }
-        return newList;
+    // Copy Random
+    curr = list.head;
+    while (curr != null) {
+      if (curr.next != null) {
+        curr.next.random = curr.random != null ? curr.random.next : null;
+      }
+      curr = curr.next.next;
     }
 
+    // Disconnecting new List
+    var original = list.head;
+    var originalCopy = list.head.next;
+    newList.head = originalCopy;
+    while (originalCopy.next != null) {
+      original.next = original.next.next;
+      originalCopy.next = originalCopy.next.next;
 
+      original = original.next;
+      originalCopy = originalCopy.next;
+    }
+    return newList;
+  }
 }

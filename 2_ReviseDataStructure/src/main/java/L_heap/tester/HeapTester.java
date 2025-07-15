@@ -6,20 +6,20 @@ import L_heap.C_MeridianFinder;
 
 public class HeapTester {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        System.out.println("Find K Pair With Min Sum");
-        kPairWithMinSum();
-        System.out.println("---------------------------------------");
+    System.out.println("Find K Pair With Min Sum");
+    kPairWithMinSum();
+    System.out.println("---------------------------------------");
 
-        System.out.println("Find Kth Largest Element in Array");
-        kthLargestElementInArray();
-        System.out.println("---------------------------------------");
+    System.out.println("Find Kth Largest Element in Array");
+    kthLargestElementInArray();
+    System.out.println("---------------------------------------");
 
-        System.out.println("Find Median");
-        findMedian();
-        System.out.println("---------------------------------------");
-    }
+    System.out.println("Find Median");
+    findMedian();
+    System.out.println("---------------------------------------");
+  }
 
   private static void findMedian() {
     C_MeridianFinder CMeridianFinder = new C_MeridianFinder();

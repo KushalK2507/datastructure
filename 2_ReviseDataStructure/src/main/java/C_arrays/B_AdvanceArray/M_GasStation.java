@@ -37,11 +37,11 @@ public class M_GasStation {
       totalCost = totalCost + diff;
       currCost = currCost + diff;
       if (currCost < 0) {
-                start=i+1;
-                currCost=0;
-            }
-        }
-
-        return totalCost >= 0 ? start:-1;
+        start = i + 1;
+        currCost = 0;
+      }
     }
+
+    return totalCost >= 0 ? start : -1;
+  }
 }

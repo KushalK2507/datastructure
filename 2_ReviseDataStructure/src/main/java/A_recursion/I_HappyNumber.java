@@ -12,12 +12,12 @@ public class I_HappyNumber {
       return false;
     }
 
-        int sum =0;
-        while (n >0){
-            sum = sum + (int)Math.pow(n%10,2);
-            n = n/10;
-        }
-
-        return isHappyNumber(sum);
+    int sum = 0;
+    while (n > 0) {
+      sum = sum + (int) Math.pow(n % 10, 2);
+      n = n / 10;
     }
+
+    return isHappyNumber(sum);
+  }
 }

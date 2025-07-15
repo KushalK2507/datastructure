@@ -13,7 +13,6 @@ public class E_ArraysAreIdentical {
   }
 
   public boolean isIdentical() {
-        return Arrays.stream(arr1).sum() == Arrays.stream(arr2).sum();
-    }
-
+    return Arrays.stream(arr1).sum() == Arrays.stream(arr2).sum();
+  }
 }

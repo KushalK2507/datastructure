@@ -14,18 +14,15 @@ public class E_IsomorphicString {
 
     for (int i = 0; i < s.length(); i++) {
 
-            if (stoTMap.containsKey(s.charAt(i))&& stoTMap.get(s.charAt(i)) != t.charAt(i)){
-                return false;
-            }
-            if (!stoTMap.containsKey(s.charAt(i)) && stoTMap.containsValue(t.charAt(i))){
-                return false;
-            }
-            stoTMap.put(s.charAt(i),t.charAt(i));
-        }
-
-        return true;
-
-
-
+      if (stoTMap.containsKey(s.charAt(i)) && stoTMap.get(s.charAt(i)) != t.charAt(i)) {
+        return false;
+      }
+      if (!stoTMap.containsKey(s.charAt(i)) && stoTMap.containsValue(t.charAt(i))) {
+        return false;
+      }
+      stoTMap.put(s.charAt(i), t.charAt(i));
     }
+
+    return true;
+  }
 }

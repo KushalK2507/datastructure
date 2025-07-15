@@ -15,22 +15,19 @@ public class B_KthLargestElementInArray {
     this.k = k;
   }
 
-    public int kthLargestElement(){
+  public int kthLargestElement() {
 
-        if (arr.length < k){
-            return -1;
-        }
-
-        for (int num : arr){
-            queue.offer(num);
-            if (queue.size() > k){
-                queue.poll();
-            }
-        }
-
-        return queue.peek();
+    if (arr.length < k) {
+      return -1;
     }
 
+    for (int num : arr) {
+      queue.offer(num);
+      if (queue.size() > k) {
+        queue.poll();
+      }
+    }
 
-
+    return queue.peek();
+  }
 }

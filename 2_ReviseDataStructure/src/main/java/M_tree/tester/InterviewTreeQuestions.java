@@ -69,7 +69,6 @@ public class InterviewTreeQuestions {
     maxPathSum();
     System.out.println();
     System.out.println("--------------------------------");
-
   }
 
   private static void maxPathSum() {
@@ -121,7 +120,7 @@ public class InterviewTreeQuestions {
     rightSideView.forEach(element -> System.out.println(element + " "));
   }
 
-  private static void lowestCommonAncestor(){
+  private static void lowestCommonAncestor() {
 
     A_BinaryTree tree = new A_BinaryTree();
     tree.insert(4);
@@ -141,7 +140,7 @@ public class InterviewTreeQuestions {
     }
   }
 
-  private static void flattenTree(){
+  private static void flattenTree() {
     A_BinaryTree tree = new A_BinaryTree();
     tree.insert(4);
     tree.insert(2);
@@ -162,8 +161,8 @@ public class InterviewTreeQuestions {
   }
 
   private static void treeFromInOrderAndPostOrder() {
-    int[] inOrder = {2,3,5,6,7,8,9,10,11,12};
-    int[] postOrder = {3,2,6,7,5,10,9,12,11,8};
+    int[] inOrder = {2, 3, 5, 6, 7, 8, 9, 10, 11, 12};
+    int[] postOrder = {3, 2, 6, 7, 5, 10, 9, 12, 11, 8};
 
     G_TreeFromInAndPostOrder tree = new G_TreeFromInAndPostOrder();
     var root = tree.binaryTree(inOrder, postOrder);
@@ -173,14 +172,14 @@ public class InterviewTreeQuestions {
   }
 
   private static void treeFromPreOrderAndInOrder() {
-    int[] preOrder = {8,5,2,3,7,6,11,9,10,12};
-    int[] inOrder = {2,3,5,6,7,8,9,10,11,12};
+    int[] preOrder = {8, 5, 2, 3, 7, 6, 11, 9, 10, 12};
+    int[] inOrder = {2, 3, 5, 6, 7, 8, 9, 10, 11, 12};
 
     F_TreeFromPreAndInOrder tree = new F_TreeFromPreAndInOrder();
     var root = tree.binaryTree(preOrder, inOrder);
 
     A_BinaryTree tree1 = new A_BinaryTree();
-   tree1.levelOrder(root);
+    tree1.levelOrder(root);
   }
 
   private static void sumOfNodeTillLeafNode() {

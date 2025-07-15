@@ -16,28 +16,34 @@ public class D_CommonUnCommonElements {
   }
 
   public void commonUnCommonElements() {
-        Map<Integer,Integer> valueToCount=new HashMap<>();
-        for (int value:set1){
-            if(valueToCount.containsKey(value)){
-                int count=valueToCount.get(value)+1;
-                valueToCount.put(value,count);
-            }
-            else {
-                valueToCount.put(value,1);
-            }
-        }
-
-        for (int value:set2){
-            if(valueToCount.containsKey(value)){
-                int count=valueToCount.get(value)+1;
-                valueToCount.put(value,count);
-            }
-            else {
-                valueToCount.put(value,1);
-            }
-        }
-
-        System.out.println("Common = "+ valueToCount.values().stream().filter(value -> value > 1).collect(Collectors.toSet()));
-        System.out.println("UnCommon = "+valueToCount.values().stream().filter(value -> value==1).collect(Collectors.toSet()));
+    Map<Integer, Integer> valueToCount = new HashMap<>();
+    for (int value : set1) {
+      if (valueToCount.containsKey(value)) {
+        int count = valueToCount.get(value) + 1;
+        valueToCount.put(value, count);
+      } else {
+        valueToCount.put(value, 1);
+      }
     }
+
+    for (int value : set2) {
+      if (valueToCount.containsKey(value)) {
+        int count = valueToCount.get(value) + 1;
+        valueToCount.put(value, count);
+      } else {
+        valueToCount.put(value, 1);
+      }
+    }
+
+    System.out.println(
+        "Common = "
+            + valueToCount.values().stream()
+                .filter(value -> value > 1)
+                .collect(Collectors.toSet()));
+    System.out.println(
+        "UnCommon = "
+            + valueToCount.values().stream()
+                .filter(value -> value == 1)
+                .collect(Collectors.toSet()));
+  }
 }

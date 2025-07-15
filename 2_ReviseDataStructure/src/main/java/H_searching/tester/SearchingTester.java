@@ -4,27 +4,26 @@ import H_searching.*;
 
 public class SearchingTester {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
+    selectionSearching();
+    System.out.println("----------------------------------------");
 
-        selectionSearching();
-        System.out.println("----------------------------------------");
+    binarySearch();
+    System.out.println("----------------------------------------");
 
-        binarySearch();
-        System.out.println("----------------------------------------");
+    searchInsertionPosition();
+    System.out.println("----------------------------------------");
 
-        searchInsertionPosition();
-        System.out.println("----------------------------------------");
+    searchElementInRotatedArray();
+    System.out.println("----------------------------------------");
 
-        searchElementInRotatedArray();
-        System.out.println("----------------------------------------");
+    firstAndLastPositionInSortedArray();
+    System.out.println("----------------------------------------");
 
-        firstAndLastPositionInSortedArray();
-        System.out.println("----------------------------------------");
-
-        minimumInRotatedSortedArray();
-        System.out.println("----------------------------------------");
-    }
+    minimumInRotatedSortedArray();
+    System.out.println("----------------------------------------");
+  }
 
   private static void minimumInRotatedSortedArray() {
     int[] arr = {3, 4, 5, 1, 2};

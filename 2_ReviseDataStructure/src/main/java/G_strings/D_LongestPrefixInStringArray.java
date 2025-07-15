@@ -10,10 +10,10 @@ public class D_LongestPrefixInStringArray {
       while (!arr[i].startsWith(longestPrefix)) {
         longestPrefix = longestPrefix.substring(0, longestPrefix.length() - 1);
         if (longestPrefix.isEmpty()) {
-                    return "";
-                }
+          return "";
         }
-        }
-        return longestPrefix;
+      }
     }
+    return longestPrefix;
+  }
 }

@@ -11,28 +11,26 @@ public class A_StackUsingArray {
   }
 
   public void push(int ele) {
-        if (top == arr.length-1){
-            throw new RuntimeException("Stack is full");
-        }
-        top++;
-        arr[top] = ele;
+    if (top == arr.length - 1) {
+      throw new RuntimeException("Stack is full");
     }
+    top++;
+    arr[top] = ele;
+  }
 
-    public int pop(){
-        if (top == -1){
-            throw new RuntimeException("Stack is Empty");
-        }
-        int res = arr[top];
-        top--;
-        return res;
+  public int pop() {
+    if (top == -1) {
+      throw new RuntimeException("Stack is Empty");
     }
+    int res = arr[top];
+    top--;
+    return res;
+  }
 
-    public int peek(){
-        if (top == -1){
-            throw new RuntimeException("Stack is Empty");
-        }
-        return arr[top];
+  public int peek() {
+    if (top == -1) {
+      throw new RuntimeException("Stack is Empty");
     }
-
-
+    return arr[top];
+  }
 }

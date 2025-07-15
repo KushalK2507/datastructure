@@ -5,54 +5,53 @@ import java.util.List;
 
 public class StringTester {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        reverseString();
-        System.out.println("----------------------------");
+    reverseString();
+    System.out.println("----------------------------");
 
-        removeSpecialCharacterFromString();
-        System.out.println("----------------------------");
+    removeSpecialCharacterFromString();
+    System.out.println("----------------------------");
 
-        removeWhiteSpacesFromString();
-        System.out.println("----------------------------");
+    removeWhiteSpacesFromString();
+    System.out.println("----------------------------");
 
-        removeDuplicatesFromString();
-        System.out.println("----------------------------");
+    removeDuplicatesFromString();
+    System.out.println("----------------------------");
 
-        reverseWordByWord();
-        System.out.println("----------------------------");
+    reverseWordByWord();
+    System.out.println("----------------------------");
 
-        anagramTest();
-        System.out.println("----------------------------");
+    anagramTest();
+    System.out.println("----------------------------");
 
-        firstOccurenceOfCharacter();
-        System.out.println("----------------------------");
+    firstOccurenceOfCharacter();
+    System.out.println("----------------------------");
 
-        lastOccurenceOfCharacter();
-        System.out.println("----------------------------");
+    lastOccurenceOfCharacter();
+    System.out.println("----------------------------");
 
-        stringSorting();
-        System.out.println("----------------------------");
+    stringSorting();
+    System.out.println("----------------------------");
 
-        reverseSentenceAndWordAlso();
-        System.out.println("----------------------------");
+    reverseSentenceAndWordAlso();
+    System.out.println("----------------------------");
 
-        nonRepeatableCharacterInString();
-        System.out.println("----------------------------");
+    nonRepeatableCharacterInString();
+    System.out.println("----------------------------");
 
-        occurrenceOfEachCharacterInString();
-        System.out.println("----------------------------");
+    occurrenceOfEachCharacterInString();
+    System.out.println("----------------------------");
 
-        groupAnagram();
-        System.out.println("----------------------------");
+    groupAnagram();
+    System.out.println("----------------------------");
 
-        prefixLongestInStringArray();
-        System.out.println("----------------------------");
+    prefixLongestInStringArray();
+    System.out.println("----------------------------");
 
-        isIsomprphicString();
-        System.out.println("----------------------------");
-
-    }
+    isIsomprphicString();
+    System.out.println("----------------------------");
+  }
 
   private static void isIsomprphicString() {
 
@@ -70,19 +69,19 @@ public class StringTester {
             + DLongestPrefixInStringArray.longestPrefix(new String[] {"flower", "flight", "flow"}));
   }
 
-    private static void groupAnagram(){
+  private static void groupAnagram() {
     B_Anagram BAnagram = new B_Anagram();
     var input = List.of("eat", "ate", "eta", "listen", "silent", "gram", "arm");
     System.out.println("Anagram Group are: ");
     BAnagram.groupAnagram(input).forEach(System.out::println);
-    }
+  }
 
-    private static void occurrenceOfEachCharacterInString(){
+  private static void occurrenceOfEachCharacterInString() {
 
     A_StringUtils utils = new A_StringUtils();
-        System.out.println("Occurrence Of Each Character "+utils.occurenceOfCharacterInString("Hello"));
-
-    }
+    System.out.println(
+        "Occurrence Of Each Character " + utils.occurenceOfCharacterInString("Hello"));
+  }
 
   private static void nonRepeatableCharacterInString() {
     A_StringUtils AStringUtils = new A_StringUtils();
@@ -97,12 +96,11 @@ public class StringTester {
             + AStringUtils.reverseSentenceWordByWord("Good Morning"));
   }
 
-    private static void stringSorting(){
+  private static void stringSorting() {
 
     C_StringSorting sorting = new C_StringSorting();
-        System.out.println("Sorting String = "+sorting.sortedString("HeLlo"));
-
-    }
+    System.out.println("Sorting String = " + sorting.sortedString("HeLlo"));
+  }
 
   private static void lastOccurenceOfCharacter() {
     A_StringUtils AStringUtils = new A_StringUtils();

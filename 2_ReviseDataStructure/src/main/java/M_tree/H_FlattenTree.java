@@ -13,11 +13,11 @@ public class H_FlattenTree {
         while (runner.right != null) {
           runner = runner.right;
         }
-                runner.right = curr.right;
-                curr.right = curr.left;
-                curr.left = null;
-            }
-            curr = curr.right;
-        }
+        runner.right = curr.right;
+        curr.right = curr.left;
+        curr.left = null;
+      }
+      curr = curr.right;
     }
+  }
 }

@@ -12,19 +12,18 @@ public class G_ReverseStringUsingStack {
     stack = new Stack<>();
   }
 
-    public String reverseString(){
+  public String reverseString() {
 
-        char[] ch = s.toCharArray();
-        for (char c: ch){
-            stack.push(c);
-        }
-
-        StringBuilder res = new StringBuilder();
-        while (!stack.isEmpty()){
-            res.append(stack.pop());
-        }
-
-        return res.toString();
-
+    char[] ch = s.toCharArray();
+    for (char c : ch) {
+      stack.push(c);
     }
+
+    StringBuilder res = new StringBuilder();
+    while (!stack.isEmpty()) {
+      res.append(stack.pop());
+    }
+
+    return res.toString();
+  }
 }

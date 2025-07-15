@@ -13,20 +13,19 @@ public class I_ProductEachExceptItself {
     Arrays.fill(res, 1);
   }
 
-    public int[] productAllExceptItselfInArray(){
+  public int[] productAllExceptItselfInArray() {
 
-        int curr =1;
-        for (int i=0;i<arr.length;i++){
-            res[i] = curr* res[i];
-            curr= curr*arr[i];
-        }
-        curr=1;
-        for (int i=arr.length-1;i>=0;i--){
-            res[i] = curr*res[i];
-            curr = curr*arr[i];
-        }
-
-        return res;
+    int curr = 1;
+    for (int i = 0; i < arr.length; i++) {
+      res[i] = curr * res[i];
+      curr = curr * arr[i];
+    }
+    curr = 1;
+    for (int i = arr.length - 1; i >= 0; i--) {
+      res[i] = curr * res[i];
+      curr = curr * arr[i];
     }
 
+    return res;
+  }
 }

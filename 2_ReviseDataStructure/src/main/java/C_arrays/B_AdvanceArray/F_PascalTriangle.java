@@ -15,20 +15,18 @@ public class F_PascalTriangle {
 
   public List<List<Integer>> pascalTriangle() {
 
-        for (int i=0;i<=height;i++){
-            List<Integer> row = new ArrayList<>();
-            for (int j=0;j<=i;j++){
-                if (j==0 || j==i){
-                    row.add(1);
-                }
-                else {
-                    row.add(result.get(i-1).get(j-1)+result.get(i-1).get(j));
-                }
-            }
-            result.add(row);
+    for (int i = 0; i <= height; i++) {
+      List<Integer> row = new ArrayList<>();
+      for (int j = 0; j <= i; j++) {
+        if (j == 0 || j == i) {
+          row.add(1);
+        } else {
+          row.add(result.get(i - 1).get(j - 1) + result.get(i - 1).get(j));
         }
-
-        return result;
+      }
+      result.add(row);
     }
 
+    return result;
+  }
 }

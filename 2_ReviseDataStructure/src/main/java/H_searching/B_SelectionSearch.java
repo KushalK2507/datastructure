@@ -10,13 +10,13 @@ public class B_SelectionSearch {
     this.targetElement = targetElement;
   }
 
-    public int selectionSearch(){
+  public int selectionSearch() {
 
-        for (int i=0;i<arr.length;i++){
-            if (arr[i] == targetElement){
-                return i;
-            }
-        }
-        return -1;
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] == targetElement) {
+        return i;
+      }
     }
+    return -1;
+  }
 }

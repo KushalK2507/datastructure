@@ -13,43 +13,35 @@ public class C_ValidParenthesis {
 
   public boolean isValidParenthesis() {
 
-        if (inputParenthesis.isEmpty()){
-            return true;
+    if (inputParenthesis.isEmpty()) {
+      return true;
+    }
+    for (char c : inputParenthesis.toCharArray()) {
+
+      if (c == '(' || c == '{' || c == '[') {
+        stackParenthesis.add(c);
+      } else if (c == ')') {
+        if (stackParenthesis.isEmpty() || stackParenthesis.peek() != '(') {
+          return false;
+        } else {
+          stackParenthesis.pop();
         }
-        for (char c: inputParenthesis.toCharArray()){
-
-            if (c == '(' || c=='{' ||c=='['){
-                stackParenthesis.add(c);
-            }
-             else if (c == ')') {
-                 if (stackParenthesis.isEmpty() || stackParenthesis.peek() != '('){
-                     return false;
-                 }
-                 else {
-                     stackParenthesis.pop();
-                 }
-                }
-                else if (c == '}') {
-                if (stackParenthesis.isEmpty() || stackParenthesis.peek() != '{'){
-                    return false;
-                }
-                else {
-                    stackParenthesis.pop();
-                }
-
-                }
-                else if (c == ']') {
-                if (stackParenthesis.isEmpty() || stackParenthesis.peek() != '['){
-                    return false;
-                }
-                else {
-                    stackParenthesis.pop();
-                }
-                }
+      } else if (c == '}') {
+        if (stackParenthesis.isEmpty() || stackParenthesis.peek() != '{') {
+          return false;
+        } else {
+          stackParenthesis.pop();
         }
 
-        return stackParenthesis.isEmpty();
+      } else if (c == ']') {
+        if (stackParenthesis.isEmpty() || stackParenthesis.peek() != '[') {
+          return false;
+        } else {
+          stackParenthesis.pop();
+        }
+      }
     }
 
-
+    return stackParenthesis.isEmpty();
+  }
 }

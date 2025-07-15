@@ -11,25 +11,24 @@ public class E_BuyAndSellMaxProfit {
   }
 
   public void maxProfit1() {
-        int buy = arr[0];
-        for (int i=1;i<arr.length;i++){
+    int buy = arr[0];
+    for (int i = 1; i < arr.length; i++) {
 
-            if (buy > arr[i]){
-                buy = arr[i];
-            }
-            if (maxProfit < arr[i] - buy){
-                maxProfit = arr[i] - buy;
-            }
-        }
+      if (buy > arr[i]) {
+        buy = arr[i];
+      }
+      if (maxProfit < arr[i] - buy) {
+        maxProfit = arr[i] - buy;
+      }
     }
+  }
 
-    public void maxProfit2(){
+  public void maxProfit2() {
 
-        for (int i=0;i<arr.length-1;i++){
-            if (arr[i] < arr[i+1]){
-                maxProfit = maxProfit+ arr[i+1]-arr[i];
-            }
-        }
+    for (int i = 0; i < arr.length - 1; i++) {
+      if (arr[i] < arr[i + 1]) {
+        maxProfit = maxProfit + arr[i + 1] - arr[i];
+      }
     }
-
+  }
 }

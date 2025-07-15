@@ -23,11 +23,8 @@ public class F_MinimumInSortedArray {
         end = mid - 1;
       }
       min = Math.min(min, arr[mid]);
-        }
-
-        return min;
     }
 
-
-
+    return min;
+  }
 }

@@ -15,18 +15,15 @@ public class B_PairToTargetSumInArray {
 
   public int[] getPair() {
 
-        Set<Integer> elements = new HashSet<>();
+    Set<Integer> elements = new HashSet<>();
 
-        for (int digit:arr){
-        int sum = target-digit;
-        if (elements.contains(sum)){
-            return new int[]{sum,digit};
-        }
-            elements.add(digit);
-        }
-        return new int[]{-1,-1};
-
-
+    for (int digit : arr) {
+      int sum = target - digit;
+      if (elements.contains(sum)) {
+        return new int[] {sum, digit};
+      }
+      elements.add(digit);
     }
-
+    return new int[] {-1, -1};
+  }
 }

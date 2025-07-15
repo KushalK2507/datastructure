@@ -12,12 +12,9 @@ public class N_NumberToRoman {
       while (digit > 0) {
         res.append(roman[i]);
         digit--;
-            }
-            num = num%numbers[i];
-        }
-        return res.toString();
-
-
-
+      }
+      num = num % numbers[i];
     }
+    return res.toString();
+  }
 }
