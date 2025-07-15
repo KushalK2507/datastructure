@@ -1,8 +1,8 @@
 package O_graph;
 
-import O_graph.adjacencyMatrix.AdjacencyMatrixGraph;
-import O_graph.DijsktraAlgo.DijsktraAlgo;
-import O_graph.adjacencyList.AdjacencyListGraph;
+import O_graph.B_adjacencyMatrix.AdjacencyMatrixGraph;
+import O_graph.C_DijsktraAlgo.DijsktraAlgo;
+import O_graph.A_adjacencyList.AdjacencyListGraph;
 
 public class GraphTester {
 

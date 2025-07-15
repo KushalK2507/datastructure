@@ -1,6 +1,10 @@
 package K_list.tester;
 
-import K_list.*;
+import K_list.A_Basic.A_SinglyLinkedList;
+import K_list.A_Basic.B_DetectAndRemoveLoop;
+import K_list.A_Basic.C_ReverseLinkedList;
+import K_list.B_Interview.*;
+
 import java.util.Set;
 
 public class InterviewQuestionTester {
@@ -357,7 +361,7 @@ public class InterviewQuestionTester {
     list.insertAtLast(6);
     list.traversal();
 
-    B_ReverseLinkedList BReverseLinkedList = new B_ReverseLinkedList(list);
+    C_ReverseLinkedList BReverseLinkedList = new C_ReverseLinkedList(list);
     BReverseLinkedList.reverseList();
     list.traversal(BReverseLinkedList.list.head);
   }

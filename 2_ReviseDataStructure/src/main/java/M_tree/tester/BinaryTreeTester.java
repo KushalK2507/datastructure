@@ -1,6 +1,6 @@
 package M_tree.tester;
 
-import M_tree.A_BinaryTree;
+import M_tree.A_Basic.A_BinaryTree;
 import java.util.ArrayList;
 import java.util.List;
 

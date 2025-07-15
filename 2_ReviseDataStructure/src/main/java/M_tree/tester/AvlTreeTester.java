@@ -1,6 +1,6 @@
 package M_tree.tester;
 
-import M_tree.B_AvlTree;
+import M_tree.A_Basic.B_AvlTree;
 
 public class AvlTreeTester {
 
