@@ -1,4 +1,4 @@
-package P_dynamic;
+package E_matrix.B_Intervals;
 
 import java.util.ArrayList;
 import java.util.List;

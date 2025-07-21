@@ -1,4 +1,4 @@
-package E_matrix;
+package E_matrix.A_matrix;
 
 import java.util.LinkedList;
 import java.util.List;

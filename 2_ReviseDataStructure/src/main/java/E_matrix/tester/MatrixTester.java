@@ -1,7 +1,7 @@
 package E_matrix.tester;
 
-import E_matrix.A_SpiralMatrix;
-import E_matrix.E_MergeInterval;
+import E_matrix.A_matrix.A_SpiralMatrix;
+import E_matrix.B_Intervals.A_MergeInterval;
 
 public class MatrixTester {
 
@@ -18,13 +18,13 @@ public class MatrixTester {
 
   private static void mergeIntervals() {
     int[][] matrix = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
-    E_MergeInterval CMergeInterval = new E_MergeInterval(matrix);
+    A_MergeInterval CMergeInterval = new A_MergeInterval(matrix);
     System.out.print("Merged Interval : ");
     CMergeInterval.mergeIntervals().forEach(System.out::print);
     System.out.println();
 
     int[][] matrix2 = {{1, 3}, {2, 6}, {8, 10}, {15, 18}, {17, 21}};
-    E_MergeInterval CMergeInterval1 = new E_MergeInterval(matrix2);
+    A_MergeInterval CMergeInterval1 = new A_MergeInterval(matrix2);
     System.out.print("Merged Interval 2 : ");
     CMergeInterval1.mergeIntervals().forEach(System.out::print);
     System.out.println();

@@ -1,6 +1,7 @@
 package P_dynamic.tester;
 
 import B_math.D_SquareRootOfNumber;
+import E_matrix.B_Intervals.C_IntervalRanges;
 import P_dynamic.*;
 import P_dynamic.A_Backtracking.*;
 import P_dynamic.B_1DP.A_CoinChange;

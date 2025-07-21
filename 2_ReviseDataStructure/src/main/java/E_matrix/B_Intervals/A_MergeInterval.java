@@ -1,14 +1,14 @@
-package E_matrix;
+package E_matrix.B_Intervals;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class E_MergeInterval {
+public class A_MergeInterval {
 
   int[][] intervals;
   List<List<Integer>> result;
 
-  public E_MergeInterval(int[][] intervals) {
+  public A_MergeInterval(int[][] intervals) {
     this.intervals = intervals;
     result = new ArrayList<>();
   }
