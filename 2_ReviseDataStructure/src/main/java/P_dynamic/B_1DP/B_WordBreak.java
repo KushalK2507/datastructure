@@ -1,8 +1,6 @@
 package P_dynamic.B_1DP;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class B_WordBreak {
 
@@ -40,5 +38,30 @@ public class B_WordBreak {
     }
 
     return dp[s.length()];
+  }
+
+  public boolean wordBreakUsingMemorization(String s, List<String> wordDict) {
+    Set<String> dict = new HashSet<>(wordDict);
+    Map<Integer,Boolean> memory = new HashMap<>();
+    return canBreak(0,s,dict,memory);
+  }
+
+  public boolean canBreak(int start,String s, Set<String> dict,Map<Integer,Boolean> memory){
+    if(start == s.length()){
+      return true;
+    }
+    if (memory.containsKey(start)) {
+      return memory.get(start);
+    }
+    for(int i=start+1;i<=s.length();i++){
+      String word = s.substring(start,i);
+      if(dict.contains(word) && canBreak(i,s,dict,memory)){
+        memory.put(i,true);
+        return true;
+      }
+    }
+
+    memory.put(start,false);
+    return false;
   }
 }
