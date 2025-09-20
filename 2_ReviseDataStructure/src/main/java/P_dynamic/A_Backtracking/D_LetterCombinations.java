@@ -3,53 +3,38 @@ package P_dynamic.A_Backtracking;
 import java.util.*;
 
 public class D_LetterCombinations {
+  private static final String[] KEYPAD = {
+          "",    // 0
+          "",    // 1
+          "abc", // 2
+          "def", // 3
+          "ghi", // 4
+          "jkl", // 5
+          "mno", // 6
+          "pqrs",// 7
+          "tuv", // 8
+          "wxyz" // 9
+  };
 
-  int[] arr;
-  String[] phoneMap = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-
-  List<String> res = new ArrayList<>();
-
-  public D_LetterCombinations(int n) {
-    populateArray(getLength(n), n);
+  public List<String> letterCombinations(String digits) {
+    List<String> result = new ArrayList<>();
+    if (digits == null || digits.length() == 0) return result;
+    backtrack(result, new StringBuilder(), digits, 0);
+    return result;
   }
 
-  private int getLength(int n) {
-
-    int len = 0;
-    while (n > 0) {
-      if (n % 10 >= 2) {
-        len++;
-      }
-      n = n / 10;
+  private void backtrack(List<String> result, StringBuilder sb, String digits, int index) {
+    if (index == digits.length()) {
+      result.add(sb.toString());
+      return;
     }
-    return len;
-  }
 
-  public void populateArray(int len, int n) {
-    arr = new int[len];
-    while (len > 0) {
-      if (n % 10 >= 2) {
-        arr[--len] = n % 10;
-      }
-      n = n / 10;
+    String letters = KEYPAD[digits.charAt(index) - '0'];
+    for (char c : letters.toCharArray()) {
+      sb.append(c);
+      backtrack(result, sb, digits, index + 1);
+      sb.deleteCharAt(sb.length() - 1); // backtrack
     }
   }
 
-  public List<String> getLetterCombinations() {
-
-    Queue<String> elements = new LinkedList<>();
-    elements.add("");
-    while (!elements.isEmpty()) {
-      String s = elements.poll();
-      if (s.length() == arr.length) {
-        res.add(s);
-      } else {
-        String phoneVal = phoneMap[arr[s.length()] - 2];
-        for (char c : phoneVal.toCharArray()) {
-          elements.add(s + c);
-        }
-      }
-    }
-    return res;
-  }
 }

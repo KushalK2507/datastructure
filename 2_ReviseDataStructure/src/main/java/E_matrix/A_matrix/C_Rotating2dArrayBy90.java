@@ -15,24 +15,29 @@ public class C_Rotating2dArrayBy90 {
     }
   }
 
-  public static boolean rotateArray90(int[][] inputArray) {
+  public static boolean rotateArray90(int[][] matrix) {
+    int n = matrix.length;
 
-    if (inputArray.length == 0 || inputArray[0].length != inputArray.length) {
-      return false;
-    }
-    int n = inputArray.length;
-    for (int layer = 0; layer < n / 2; layer++) {
-      int last = n - 1 - layer;
-      for (int i = layer; i < last; i++) {
-        int offSet = i - layer;
-        int top = inputArray[layer][i];
-        inputArray[layer][i] = inputArray[last - offSet][layer];
-        inputArray[last - offSet][layer] = inputArray[last][last - offSet];
-        inputArray[last][last - offSet] = inputArray[i][last];
-        inputArray[i][last] = top;
+    // 1. Transpose (swap across diagonal)
+    for (int i = 0; i < n; i++) {
+      for (int j = i + 1; j < n; j++) {
+        int temp = matrix[i][j];
+        matrix[i][j] = matrix[j][i];
+        matrix[j][i] = temp;
       }
     }
 
+    // 2. Reverse each row
+    for (int i = 0; i < n; i++) {
+      int left = 0, right = n - 1;
+      while (left < right) {
+        int temp = matrix[i][left];
+        matrix[i][left] = matrix[i][right];
+        matrix[i][right] = temp;
+        left++;
+        right--;
+      }
+    }
     return true;
   }
 }

@@ -34,8 +34,6 @@ public class C_MinWindowSubstring {
         if (tMap.containsKey(startChar) && windowCount.get(startChar) < tMap.get(startChar)){
             formed--;
         }
-
-
             left++;
         }
         right++;

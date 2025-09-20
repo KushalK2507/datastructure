@@ -1,6 +1,7 @@
 package C_arrays.B_AdvanceArray;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class F_PascalTriangle {
@@ -28,5 +29,21 @@ public class F_PascalTriangle {
     }
 
     return result;
+  }
+
+  public List<Integer> printLevel(int n){
+    List<Integer> row = new LinkedList<>();
+    if (n ==1){
+      row.add(1);
+      return row;
+    }
+    row.add(1);
+    for (int i=1;i<n;i++){
+      for (int j=row.size()-1;j>=1;j--){
+          row.set(j,row.get(j-1)+row.get(j));
+        }
+      row.add(1);
+    }
+    return row;
   }
 }

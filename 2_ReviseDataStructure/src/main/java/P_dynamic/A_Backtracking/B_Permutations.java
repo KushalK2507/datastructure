@@ -11,9 +11,9 @@ public class B_Permutations {
     if (combine.size() == arr.length) {
       result.add(new LinkedList<>(combine));
     } else {
-      for (int i = 0; i < arr.length; i++) {
-        if (!combine.contains(arr[i])) {
-          combine.add(arr[i]);
+      for (int j : arr) {
+        if (!combine.contains(j)) {
+          combine.add(j);
           getPermutationsFromArray(result, combine, arr);
           combine.remove(combine.size() - 1);
         }

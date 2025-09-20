@@ -1,4 +1,4 @@
-package P_dynamic.B_2DP;
+package P_dynamic.C_2DP;
 
 // Input: s1 = "aabcc", s2 = "dbbca", s3 = "aadbbcbcac"
 //        Output: true

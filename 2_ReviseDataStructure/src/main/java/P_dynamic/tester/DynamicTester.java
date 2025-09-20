@@ -7,7 +7,7 @@ import P_dynamic.A_Backtracking.*;
 import P_dynamic.B_1DP.A_CoinChange;
 import P_dynamic.B_1DP.C_ClimbStairs;
 import P_dynamic.B_1DP.D_HouseRobbers;
-import P_dynamic.B_2DP.A_MinPathSum;
+import P_dynamic.C_2DP.A_MinPathSum;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -112,7 +112,7 @@ public class DynamicTester {
 
     A_MinPathSum DTraingle = new A_MinPathSum();
     System.out.println("Min path Sum: ");
-    System.out.print(DTraingle.minPathSum(triangle));
+    System.out.print(DTraingle.triangle(triangle));
   }
 
   private static void coinCombinationChange() {
@@ -171,8 +171,8 @@ public class DynamicTester {
   }
 
   private static void letterCombination() {
-    D_LetterCombinations DLetterCombinations = new D_LetterCombinations(123);
-    System.out.print(DLetterCombinations.getLetterCombinations());
+    D_LetterCombinations DLetterCombinations = new D_LetterCombinations();
+    System.out.print(DLetterCombinations.letterCombinations("123"));
   }
 
   private static void intervalRanges() {
@@ -199,7 +199,7 @@ public class DynamicTester {
 
   private static void nextLargestNumber() {
     int nextLargestNoInput = 534976;
-    A_LargestNextNumber ALargestNextNumber = new A_LargestNextNumber(nextLargestNoInput);
-    System.out.print("Next Largest Number = " + ALargestNextNumber.nextLargestNumber());
+    A_LargestNextNumber ALargestNextNumber = new A_LargestNextNumber();
+    System.out.print("Next Largest Number = " + ALargestNextNumber.nextLargerNumber(nextLargestNoInput));
   }
 }

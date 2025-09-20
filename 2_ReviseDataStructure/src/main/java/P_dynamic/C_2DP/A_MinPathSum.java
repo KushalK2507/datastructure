@@ -1,4 +1,4 @@
-package P_dynamic.B_2DP;
+package P_dynamic.C_2DP;
 
 import java.util.List;
 

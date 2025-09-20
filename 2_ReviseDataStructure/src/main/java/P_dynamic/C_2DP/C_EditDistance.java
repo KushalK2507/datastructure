@@ -1,4 +1,4 @@
-package P_dynamic.B_2DP;
+package P_dynamic.C_2DP;
 
 public class C_EditDistance {
   public int minDistance(String word1, String word2) {

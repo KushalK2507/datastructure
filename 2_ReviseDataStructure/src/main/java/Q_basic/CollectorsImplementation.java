@@ -28,7 +28,7 @@ public class CollectorsImplementation {
     genderCount.forEach(
         (gender, count) -> System.out.println("Gender : " + gender + " Its count is: " + count));
 
-    List<Student> studentsSortedByName = students.stream().sorted(s).collect(Collectors.toList());
+    List<Student> studentsSortedByName = students.stream().sorted(s).toList();
     System.out.println("Student List sorted on Name");
     studentsSortedByName.forEach(student -> System.out.println(student.toString()));
 

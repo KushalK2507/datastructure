@@ -150,6 +150,9 @@ public class ArraysTester {
       System.out.println(
           result.get(i).stream().map(String::valueOf).collect(Collectors.joining(" ")));
     }
+
+    var res = LPascalTriangle.printLevel(7);
+    System.out.println("Level = "+res);
   }
 
   private static void maxBuyAndSellProfit() {
@@ -194,6 +197,12 @@ public class ArraysTester {
     System.out.println("Orignal Array = " + Arrays.toString(arr));
     GMoveZeroAtEnd.moveZeroAtEnd();
     System.out.println("Move Zeros At end = " + Arrays.toString(arr));
+
+    int[] arr1 = {3, 5, 0, 0, 4};
+    A_MoveZeroAtEnd GMoveZeroAtEnd1 = new A_MoveZeroAtEnd(arr1);
+    System.out.println("Orignal Array = " + Arrays.toString(arr1));
+    GMoveZeroAtEnd1.moveZeroAtEnd();
+    System.out.println("Move Zeros At end = " + Arrays.toString(arr1));
   }
 
   private static void arrayIsUnique() {

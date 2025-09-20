@@ -44,7 +44,7 @@ public class F_TreeFromPreAndInOrder {
         buildBinaryTree(
             preOrder,
             preOrderStart + 1,
-            preOrderEnd + lengthOfLeftSubTree - 1,
+                preOrderStart  + lengthOfLeftSubTree - 1,
             inOrder,
             inOrderStart,
             rootValueIndex - 1,
