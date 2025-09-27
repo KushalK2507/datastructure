@@ -3,9 +3,10 @@ package C_arrays.C_KadaneAlgo;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 // For finding longest subarray for sum
-public class A_KadaneAlgo {
+public class A_MaxSum {
 
   public int[] maxSubarraySumCircularArray(int[] nums) {
     int n = nums.length;
