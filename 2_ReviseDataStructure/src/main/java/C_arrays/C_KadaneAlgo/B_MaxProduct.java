@@ -16,7 +16,7 @@ public class B_MaxProduct {
         for(int i=1;i<n;i++){
             int val = arr[i];
             int temp = maxProductEnd;
-            maxProductEnd = Math.max(val,Math.max(val*maxProductEnd,val*minProductEnd));
+            maxProductEnd = Math.max(val,Math.max(val*temp,val*minProductEnd));
             minProductEnd = Math.min(val,Math.min(val * temp,val*minProductEnd));
 
             maxProduct = Math.max(maxProduct,maxProductEnd);
