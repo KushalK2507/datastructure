@@ -75,101 +75,103 @@ public class RecursionTester {
 
     private static void recursiveRange(){
         J_RecursiveRange recursiveRange = new J_RecursiveRange();
-        System.out.println("Recursive Range Using Recursion = "+recursiveRange.recursiveRangeRecusrion(5));
-        System.out.println("Recursive Range Using Formula = "+recursiveRange.recursiveRangeUsingFormula(5));
+        System.out.println("Recursive Range of 5 Using Recursion = "+recursiveRange.recursiveRangeRecusrion(5));
+        System.out.println("Recursive Range of 5 Using Formula = "+recursiveRange.recursiveRangeUsingFormula(5));
     }
 
     private static void productOfArray(){
         K_ProductOfDigitsInArray productOfArray = new K_ProductOfDigitsInArray();
-        System.out.println("Product Of Array = "+productOfArray.productOfArray(new int [] {1,2,3,4,5},5));
+        System.out.println("[1,2,3,4,5] Product Of Array = "+productOfArray.productOfArray(new int [] {1,2,3,4,5},5));
     }
 
     private static void happyNumber(){
 
         I_HappyNumber happyNumber = new I_HappyNumber();
-        System.out.println("Is Happy Number = "+happyNumber.isHappyNumber(7));
-        System.out.println("Is Happy Number = "+happyNumber.isHappyNumber(13));
-        System.out.println("Is Happy Number = "+happyNumber.isHappyNumber(129));
-        System.out.println("Is Happy Number = "+happyNumber.isHappyNumber(338));
-        System.out.println("Is Happy Number = "+happyNumber.isHappyNumber(3));
+        System.out.println("7 Is Happy Number = "+happyNumber.isHappyNumber(7));
+        System.out.println("13 Is Happy Number = "+happyNumber.isHappyNumber(13));
+        System.out.println("129 Is Happy Number = "+happyNumber.isHappyNumber(129));
+        System.out.println("338 Is Happy Number = "+happyNumber.isHappyNumber(338));
+        System.out.println("3 Is Happy Number = "+happyNumber.isHappyNumber(3));
 
     }
 
     private static void pallendrome(){
 
         H_Pallendrome pallendrome = new H_Pallendrome();
-        System.out.println("Recursion String Pallendrome = "+pallendrome.isPallendromeStringRecursion("abcba"));
-        System.out.println("String Pallendrome = "+pallendrome.isPallendromeString("abcba"));
+        System.out.println("Recursion abcba Pallendrome = "+pallendrome.isPallendromeStringRecursion("abcba"));
+        System.out.println("abcba Pallendrome = "+pallendrome.isPallendromeString("abcba"));
 
 
-        System.out.println("Recursion String Pallendrome = "+pallendrome.isPallendromeStringRecursion("Hello"));
-        System.out.println("String Pallendrome = "+pallendrome.isPallendromeString("Hello"));
+        System.out.println("Recursion Hello Pallendrome = "+pallendrome.isPallendromeStringRecursion("Hello"));
+        System.out.println("Hello Pallendrome = "+pallendrome.isPallendromeString("Hello"));
 
 
             boolean result = pallendrome.isPallendromeNumberRecursion(123321,0)==123321;
-        System.out.println("Recursion Number Pallendrome = "+result );
-        System.out.println("Number Pallendrome = "+pallendrome.isPallendromeNumber(123321));
+        System.out.println("Recursion Number 123321 Pallendrome = "+result );
+        System.out.println("Number 123321 Pallendrome = "+pallendrome.isPallendromeNumber(123321));
 
 
         boolean result1 = pallendrome.isPallendromeNumberRecursion(123,0) == 123;
-        System.out.println("Recursion Number Pallendrome = "+result1);
-        System.out.println("Number Pallendrome = "+pallendrome.isPallendromeNumber(123321));
+        System.out.println("Recursion Number 123 Pallendrome = "+result1);
+        System.out.println("Number 123 Pallendrome = "+pallendrome.isPallendromeNumber(123321));
 
     }
 
     private static void firstUpperCaseInString(){
         G_FirstUpperCaseInString firstUpperCase = new G_FirstUpperCaseInString();
-        System.out.println("First Upper Case = "+firstUpperCase.firstUpperCase("hllEo"));
+        System.out.println("First Upper Case in hllEo is = "+firstUpperCase.firstUpperCase("hllEo"));
 
     }
 
     private static void d2b(){
         F_DecimalToBinary d2b = new F_DecimalToBinary();
-        System.out.println("Decimal 2 Binary Recursion = "+d2b.d2bRecursion(5, new StringBuilder()));
-        System.out.println("Decimal 2 Binary = "+d2b.d2B(5));
+        System.out.println("Decimal 2 Binary of 5 using Recursion = "+d2b.d2bRecursion(5, new StringBuilder()));
+        System.out.println("Decimal 2 Binary of 5 = "+d2b.d2B(5));
     }
 
     private static void gcd(){
         E_GcdOfNumber gcd = new E_GcdOfNumber();
-        System.out.println("GCD = "+gcd.gcd(2,4));
+        System.out.println("GCD of 2 and 4 is = "+gcd.gcd(2,4));
     }
 
     private static void reverseString(){
         D_ReverseString reverseOfString = new D_ReverseString();
-        System.out.println("Reversed String = "+reverseOfString.reverseString("Hello"));
+        System.out.println("Reversed Hello is = "+reverseOfString.reverseString("Hello"));
     }
     private static void reverseStringRecursion(){
         D_ReverseString reverseOfString = new D_ReverseString();
-        System.out.println("Reversed String = "+reverseOfString.reverseStringRecursion("Hello"));
+        System.out.println("Reversed Hello is = "+reverseOfString.reverseStringRecursion("Hello"));
 
     }
     private static void sumOfDigits(){
         C_SumOfDigits sumOfDigits= new C_SumOfDigits();
-        System.out.println("Sum = "+sumOfDigits.sumOfDigits(14));
+        System.out.println("Sum of Digits of 14 is "+sumOfDigits.sumOfDigits(14));
     }
     private static void sumOfDigitsRecursion(){
         C_SumOfDigits sumOfDigits= new C_SumOfDigits();
-        System.out.println("Sum = "+sumOfDigits.sumOfDigitsRecusrion(14));
+        System.out.println("Sum of Digits 14 is "+sumOfDigits.sumOfDigitsRecusrion(14));
     }
 
     public static void factorial(){
         B_Factorial factorial = new B_Factorial();
-        System.out.println("Factorial = "+factorial.fact(5));
+        System.out.println("Factorial of 5 iss "+factorial.fact(5));
     }
 
     public static void factorialRecursion(){
         B_Factorial factorial = new B_Factorial();
-        System.out.println("Factorial = "+factorial.factRecursion(5));
+        System.out.println("Factorial of 5 is "+factorial.factRecursion(5));
     }
 
     private static void fibonacciSeriesSum(){
         A_Fibonacci fibanacii = new A_Fibonacci();
+        System.out.println("Sum of Fibonacci Series of 5");
         System.out.print(fibanacii.sumOfFibanacciSeries(5));
         System.out.println();
     }
 
     private static void fibonacciSeriesRecursion(){
         A_Fibonacci fibanacii = new A_Fibonacci();
+        System.out.println("Fibonacci Series of 5");
         for (int i=0;i<5;i++){
             System.out.print(fibanacii.sumOfFibanacciSeriesUsingRecursion(i)+" ");
         }
@@ -178,6 +180,7 @@ public class RecursionTester {
 
     private static void fibonacci(){
         A_Fibonacci fibanacii = new A_Fibonacci();
+        System.out.println("Fibonacci Series of 5");
         fibanacii.printFibanacciSeries(5);
         System.out.println();
     }

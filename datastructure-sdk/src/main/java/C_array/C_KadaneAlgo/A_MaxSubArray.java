@@ -1,6 +1,6 @@
 package C_array.C_KadaneAlgo;
 
-public class MaxSubArray {
+public class A_MaxSubArray {
 
     public int[] maxSubArray(int[] arr){
 

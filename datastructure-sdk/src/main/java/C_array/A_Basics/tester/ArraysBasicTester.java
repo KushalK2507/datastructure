@@ -51,18 +51,18 @@ public class ArraysBasicTester {
         int[] arr1 = {1,2,3,65,3,2};
         int[] arr2 = {1,2,3,56,2,3};
         E_TwoArrayIdentical arraysAreIdentical = new E_TwoArrayIdentical();
-        System.out.println("Array are Identical = "+arraysAreIdentical.isArrayIdentical(arr1,arr2));
+        System.out.println("Input Array are "+Arrays.toString(arr1)+" and "+Arrays.toString(arr2)+"  are Identical = "+arraysAreIdentical.isArrayIdentical(arr1,arr2));
 
         int[] arr3 = {1,2,3,65,44,3,2};
         int[] arr4 = {1,2,3,65,2,3,44};
-        System.out.println("Array are Identical1 = "+arraysAreIdentical.isArrayIdentical(arr3,arr4));
+        System.out.println("Input Array are "+Arrays.toString(arr3)+" and "+Arrays.toString(arr4)+" are Identical1 = "+arraysAreIdentical.isArrayIdentical(arr3,arr4));
     }
 
     private static void secondLargestAndLargestInArray(){
         int[] arr = {10, 5, 10};
         D_LargestAndSecondLargestInArray secondLargestAndLargestInArray = new D_LargestAndSecondLargestInArray();
         var result = secondLargestAndLargestInArray.largestAndSecondLargestNumber(arr);
-        System.out.println("Largest = "+result[0]+" Second largest = "+result[1]);
+        System.out.println("Input Array is "+Arrays.toString(arr)+"Largest = "+result[0]+" Second largest = "+result[1]);
     }
 
     private static void missingNumberInArray(){
@@ -73,7 +73,7 @@ public class ArraysBasicTester {
         int[] arr = {1,2,3,4,5,0,7,8,6};
         int lengthofArray = 9;
         int missingNumber= missingNumberInArray.missingNumberInArray(arr, lengthofArray);
-        System.out.println(missingNumber);
+        System.out.println("Missing Number in Array "+Arrays.toString(arr)+" is "+missingNumber);
     }
 
     private static void pairEachElementInArray(){
@@ -81,15 +81,15 @@ public class ArraysBasicTester {
         List<List<Integer>> result = new ArrayList<>();
         int[] arr = {1,2,3};
         pairEachElementInArray.pairEachElement(result,arr, new ArrayList<>());
-        System.out.println("Combination Size = "+result.size());
-        result.forEach(System.out::println);
+        System.out.println("Combination of = "+Arrays.toString(arr));
+        result.forEach(System.out::print);
     }
 
     public static void reverseArrayWithoutUsingNewArray(){
         int[] arr = {1,2,3,4,5};
         A_ReverseArrayWithoutUsingNewArray reverseArrayWithoutUsingNewArray = new A_ReverseArrayWithoutUsingNewArray();
         reverseArrayWithoutUsingNewArray.reverseArray(arr);
-        System.out.println("Reverse Array: "+ Arrays.toString(arr));
+        System.out.println("Reverse Array of "+Arrays.toString(arr)+" is "+Arrays.toString(arr));
     }
 
 }

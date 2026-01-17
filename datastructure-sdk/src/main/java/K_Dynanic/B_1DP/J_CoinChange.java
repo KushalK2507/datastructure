@@ -1,4 +1,4 @@
-package K_Dynanic;
+package K_Dynanic.B_1DP;
 
 public class J_CoinChange {
 

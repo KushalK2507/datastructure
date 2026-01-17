@@ -14,6 +14,9 @@ public class MatrixTester {
     spiralFormMatrix();
     System.out.println("--------------------------------------");
 
+    rotateMatrixBy90();
+    System.out.println("--------------------------------------");
+
     // Set Matrix to Zero
     setMatrixToZero();
     System.out.println("--------------------------------------");
@@ -26,11 +29,13 @@ public class MatrixTester {
   private static void mergeIntervals() {
     int[][] matrix = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
     D_MergeIntervals mergeInterval = new D_MergeIntervals();
+    System.out.println("Original Array "+Arrays.deepToString(matrix));
     System.out.print("Merged Interval : ");
     mergeInterval.mergeIntervals(matrix).forEach(System.out::print);
     System.out.println();
 
     int[][] matrix2 = {{1, 3}, {2, 6}, {8, 10}, {15, 18}, {17, 21}};
+    System.out.println("Original Array "+Arrays.deepToString(matrix2));
     System.out.print("Merged Interval 2 : ");
     mergeInterval.mergeIntervals(matrix2).forEach(System.out::print);
     System.out.println();
@@ -57,6 +62,7 @@ public class MatrixTester {
   private static void spiralFormMatrix() {
     int[][] matrix = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
     A_SpiralMatrix spiralMatrix = new A_SpiralMatrix();
+    System.out.println("Original Array "+Arrays.deepToString(matrix));
     System.out.println("Spiral Matrix = " + spiralMatrix.spiralMatrix(matrix));
   }
 }

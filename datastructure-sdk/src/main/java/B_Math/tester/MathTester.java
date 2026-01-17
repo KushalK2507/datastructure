@@ -52,10 +52,10 @@ public class MathTester {
     private static void plusOne(){
         int[] arr1 = {1,2,3};
         A_PlusOne plusOne = new A_PlusOne();
-        System.out.println("PlusOne = "+ Arrays.toString(plusOne.plusOne(arr1)));
+        System.out.println("PlusOne of "+Arrays.toString(arr1)+" is " + Arrays.toString(plusOne.plusOne(arr1)));
 
         int[] arr2 = {9,9};
-        System.out.println("PlusOne = "+ Arrays.toString(plusOne.plusOne(arr2)));
+        System.out.println("PlusOne of "+Arrays.toString(arr2)+" is "+ Arrays.toString(plusOne.plusOne(arr2)));
 
     }
 }

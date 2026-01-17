@@ -1,4 +1,4 @@
-package K_Dynanic;
+package K_Dynanic.C_2DP;
 
 public class I_SearchIn2dMatrix {
 
