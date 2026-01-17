@@ -19,7 +19,7 @@ public class C_ValidParenthesis {
     for (char c : inputParenthesis.toCharArray()) {
 
       if (c == '(' || c == '{' || c == '[') {
-        stackParenthesis.add(c);
+        stackParenthesis.push(c);
       } else if (c == ')') {
         if (stackParenthesis.isEmpty() || stackParenthesis.peek() != '(') {
           return false;

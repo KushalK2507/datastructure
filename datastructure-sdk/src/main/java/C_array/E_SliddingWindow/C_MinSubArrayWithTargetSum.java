@@ -1,0 +1,9 @@
+package C_array.E_SliddingWindow;
+
+public class C_MinSubArrayWithTargetSum {
+
+  public int[] minSubArrayWithTargetSum(int[] arr, int targetSum) {
+
+    return new int[3];
+  }
+}
